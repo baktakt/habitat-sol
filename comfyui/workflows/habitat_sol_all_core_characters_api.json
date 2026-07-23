@@ -1,0 +1,1152 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "FLUX1/flux1-dev-fp8.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "3": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "clip": [
+        "2",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "4": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "clip": [
+        "3",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.32,
+      "strength_clip": 0.32
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "4",
+        1
+      ],
+      "clip_l": "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member. Close natural hair, warm tired eyes, composed principled expression, ochre practical council jacket over dark thermal layers, subtle abstract civic badge, poised posture in a worn council corridor, municipal archive mood, documentary realism, soft institutional habitat light, repaired and aging Mars town interior, no readable text.",
+      "t5xxl": "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member. Close natural hair, warm tired eyes, composed principled expression, ochre practical council jacket over dark thermal layers, subtle abstract civic badge, poised posture in a worn council corridor, municipal archive mood, documentary realism, soft institutional habitat light, repaired and aging Mars town interior, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "4",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "low quality, blurry, plastic skin, anime, cartoon, glamour fashion, glossy generic sci-fi, fantasy armor, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "7": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "8": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "9": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "seed": 8291791398777243546,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "11": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "10",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/amara_okonkwo"
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "13": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "14": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "13",
+        0
+      ],
+      "clip": [
+        "13",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.32,
+      "strength_clip": 0.32
+    }
+  },
+  "15": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "14",
+        1
+      ],
+      "clip_l": "Elena Reyes, 41-year-old doctor and reproductive health/adaptation specialist from Habitat Elysium. Latina or Afro-Latina woman with dark hair and visible silver streaks, precise intelligent expression, clinical whites layered with thermal vest and Mars-red scarf, compact worn Mars clinic, old clean equipment, human softness, metropolitan minimalism adapted to Sol scarcity, documentary medical portrait, no readable text.",
+      "t5xxl": "Elena Reyes, 41-year-old doctor and reproductive health/adaptation specialist from Habitat Elysium. Latina or Afro-Latina woman with dark hair and visible silver streaks, precise intelligent expression, clinical whites layered with thermal vest and Mars-red scarf, compact worn Mars clinic, old clean equipment, human softness, metropolitan minimalism adapted to Sol scarcity, documentary medical portrait, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "16": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "14",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "low quality, blurry, plastic skin, anime, cartoon, glossy hospital futurism, glamour fashion, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "17": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "14",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "18": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "19": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "17",
+        0
+      ],
+      "seed": 6558920388049699829,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "15",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "18",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "20": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "19",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "21": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "20",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/elena_reyes"
+    }
+  },
+  "22": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.28,
+      "strength_clip": 0.28
+    }
+  },
+  "23": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "22",
+        0
+      ],
+      "clip": [
+        "22",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.22,
+      "strength_clip": 0.22
+    }
+  },
+  "24": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "23",
+        0
+      ],
+      "clip": [
+        "23",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.12,
+      "strength_clip": 0.12
+    }
+  },
+  "25": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "24",
+        1
+      ],
+      "clip_l": "Nico Okonkwo-Reyes, 14-year-old guarded adolescent boy, compact and watchful, practical layered habitat school clothes in mustard and olive, small keepsake from evacuated mining settlement, wary intelligent eyes, standing in a worn school corridor near a maintenance access panel, documentary realism, age-appropriate modest styling, no glamour, no readable text.",
+      "t5xxl": "Nico Okonkwo-Reyes, 14-year-old guarded adolescent boy, compact and watchful, practical layered habitat school clothes in mustard and olive, small keepsake from evacuated mining settlement, wary intelligent eyes, standing in a worn school corridor near a maintenance access panel, documentary realism, age-appropriate modest styling, no glamour, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "26": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "24",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "adult, adult-coded, glamour, sexualized, revealing clothing, makeup, too young toddler, low quality, blurry, anime, cartoon, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "27": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "24",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "28": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "29": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "27",
+        0
+      ],
+      "seed": 4060239844038335738,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "25",
+        0
+      ],
+      "negative": [
+        "26",
+        0
+      ],
+      "latent_image": [
+        "28",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "30": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "29",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "31": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "30",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/nico_okonkwo_reyes"
+    }
+  },
+  "32": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.28,
+      "strength_clip": 0.28
+    }
+  },
+  "33": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "32",
+        0
+      ],
+      "clip": [
+        "32",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.22,
+      "strength_clip": 0.22
+    }
+  },
+  "34": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "33",
+        0
+      ],
+      "clip": [
+        "33",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.12,
+      "strength_clip": 0.12
+    }
+  },
+  "35": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "34",
+        1
+      ],
+      "clip_l": "Safi Okonkwo-Reyes, 6-year-old child born in Habitat Sol, bright curious expression, natural curls, child-size orange habitat jacket with handmade colorful patches, abstract animal drawings tucked in pockets, greenhouse-edge family corridor, warm plant light, innocent documentary portrait, age-appropriate, no readable text.",
+      "t5xxl": "Safi Okonkwo-Reyes, 6-year-old child born in Habitat Sol, bright curious expression, natural curls, child-size orange habitat jacket with handmade colorful patches, abstract animal drawings tucked in pockets, greenhouse-edge family corridor, warm plant light, innocent documentary portrait, age-appropriate, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "36": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "34",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "adult, adult-coded, glamour, sexualized, revealing clothing, makeup, low quality, blurry, anime, cartoon, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "37": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "34",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "38": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "39": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "37",
+        0
+      ],
+      "seed": 2472081431891134745,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "36",
+        0
+      ],
+      "latent_image": [
+        "38",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "40": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "39",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "41": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "40",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/safi_okonkwo_reyes"
+    }
+  },
+  "42": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "43": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "42",
+        0
+      ],
+      "clip": [
+        "42",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "44": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "43",
+        0
+      ],
+      "clip": [
+        "43",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.32,
+      "strength_clip": 0.32
+    }
+  },
+  "45": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "44",
+        1
+      ],
+      "clip_l": "Mira Varga, 42-year-old agronomist and greenhouse systems lead, dark curly hair tied back, strong cheekbones, tired observant eyes, calm practical authority, green patched utility jumpsuit, greenhouse patch as abstract insignia, condensation-lit Mars greenhouse aisle, warm plant light, documentary realism, no readable text.",
+      "t5xxl": "Mira Varga, 42-year-old agronomist and greenhouse systems lead, dark curly hair tied back, strong cheekbones, tired observant eyes, calm practical authority, green patched utility jumpsuit, greenhouse patch as abstract insignia, condensation-lit Mars greenhouse aisle, warm plant light, documentary realism, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "46": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "44",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "low quality, blurry, plastic skin, anime, cartoon, fashion glamour, glossy generic sci-fi, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "47": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "44",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "48": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "49": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "47",
+        0
+      ],
+      "seed": 6587395405670392736,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "45",
+        0
+      ],
+      "negative": [
+        "46",
+        0
+      ],
+      "latent_image": [
+        "48",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "50": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "49",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "51": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "50",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/mira_varga"
+    }
+  },
+  "52": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "53": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "52",
+        0
+      ],
+      "clip": [
+        "52",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.35,
+      "strength_clip": 0.35
+    }
+  },
+  "54": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "53",
+        0
+      ],
+      "clip": [
+        "53",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.32,
+      "strength_clip": 0.32
+    }
+  },
+  "55": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "54",
+        1
+      ],
+      "clip_l": "Kenji Sato, 45-year-old exterior maintenance engineer and rover mechanic, East Asian or mixed off-Earth man, close-cropped hair, weathered face, patient warm expression, orange dust-stained workwear, mechanic hands, tool harness, repair bay with rover parts, documentary realism, practical utility light, no readable text.",
+      "t5xxl": "Kenji Sato, 45-year-old exterior maintenance engineer and rover mechanic, East Asian or mixed off-Earth man, close-cropped hair, weathered face, patient warm expression, orange dust-stained workwear, mechanic hands, tool harness, repair bay with rover parts, documentary realism, practical utility light, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "56": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "54",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "low quality, blurry, plastic skin, anime, cartoon, soldier, military hero, glossy astronaut, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "57": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "54",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "58": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "59": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "57",
+        0
+      ],
+      "seed": 5835072917252423595,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "55",
+        0
+      ],
+      "negative": [
+        "56",
+        0
+      ],
+      "latent_image": [
+        "58",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "60": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "59",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "61": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "60",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/kenji_sato"
+    }
+  },
+  "62": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.28,
+      "strength_clip": 0.28
+    }
+  },
+  "63": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "62",
+        0
+      ],
+      "clip": [
+        "62",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.22,
+      "strength_clip": 0.22
+    }
+  },
+  "64": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "63",
+        0
+      ],
+      "clip": [
+        "63",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.12,
+      "strength_clip": 0.12
+    }
+  },
+  "65": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "64",
+        1
+      ],
+      "clip_l": "Lina Sato-Varga, 16-year-old restless teenage girl from Habitat Sol, age-appropriate adolescent face, dark wavy hair, customized practical green jacket over orange hoodie, patched cuffs and abstract decals, direct guarded eyes, modest teenage styling adapted from metropolitan feeds, warm worn habitat corridor with blurred departure screen, documentary realism, no glamour, no readable text.",
+      "t5xxl": "Lina Sato-Varga, 16-year-old restless teenage girl from Habitat Sol, age-appropriate adolescent face, dark wavy hair, customized practical green jacket over orange hoodie, patched cuffs and abstract decals, direct guarded eyes, modest teenage styling adapted from metropolitan feeds, warm worn habitat corridor with blurred departure screen, documentary realism, no glamour, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "66": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "64",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "adult woman, adult-coded, glamour, sexualized, revealing clothing, makeup glamour, fashion model pose, low quality, blurry, anime, cartoon, readable text, logo, watermark, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "67": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "64",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "68": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "69": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "67",
+        0
+      ],
+      "seed": 8026871093501798969,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "65",
+        0
+      ],
+      "negative": [
+        "66",
+        0
+      ],
+      "latent_image": [
+        "68",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "70": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "69",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "71": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "70",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/lina_sato_varga"
+    }
+  },
+  "72": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "Krea2-realism-V1.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2
+    }
+  },
+  "73": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "72",
+        0
+      ],
+      "clip": [
+        "72",
+        1
+      ],
+      "lora_name": "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
+    }
+  },
+  "74": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "73",
+        0
+      ],
+      "clip": [
+        "73",
+        1
+      ],
+      "lora_name": "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
+    }
+  },
+  "75": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "74",
+        1
+      ],
+      "clip_l": "Tomas Sato-Varga, 9-year-old school-age boy, not toddler, not preschooler, soft perceptive expression, short dark hair visible, patched child-size indoor habitat clothes, holding a small robot part, family workshop corner in an old Mars habitat, curious and tender, documentary realism, no helmet, no headphones, no spacesuit, no readable text.",
+      "t5xxl": "Tomas Sato-Varga, 9-year-old school-age boy, not toddler, not preschooler, soft perceptive expression, short dark hair visible, patched child-size indoor habitat clothes, holding a small robot part, family workshop corner in an old Mars habitat, curious and tender, documentary realism, no helmet, no headphones, no spacesuit, no readable text. Habitat Sol is a lived-in civilian Mars town: maintained, repaired, loved, aging, civic and family-centered rather than glossy space opera. Use practical modest clothing, worn textiles, red dust traces, soft practical habitat light, emotionally specific face, 85mm medium portrait, shallow depth of field.",
+      "guidance": 3.5
+    }
+  },
+  "76": {
+    "class_type": "CLIPTextEncodeFlux",
+    "inputs": {
+      "clip": [
+        "74",
+        1
+      ],
+      "clip_l": "",
+      "t5xxl": "helmet, headphones, headset, hat, space helmet, spacesuit, EVA suit, toddler, baby, preschooler, adult, teenager, adult-coded, glamour, readable text, logo, watermark, anime, cartoon, deformed hands",
+      "guidance": 3.5
+    }
+  },
+  "77": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "74",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 832,
+      "height": 1216
+    }
+  },
+  "78": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "79": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "77",
+        0
+      ],
+      "seed": 4949859266261242648,
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "75",
+        0
+      ],
+      "negative": [
+        "76",
+        0
+      ],
+      "latent_image": [
+        "78",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "80": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "79",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "81": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "80",
+        0
+      ],
+      "filename_prefix": "HabitatSol/characters/tomas_sato_varga"
+    }
+  }
+}
