@@ -1,0 +1,465 @@
+{
+  "last_node_id": 7,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "title": "MODEL \u2014 IntoRealism Ultra v4.0 (SDXL)",
+      "pos": [
+        40,
+        250
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "N/intorealismUltra_v40.safetensors"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncode",
+      "title": "CHARACTER DEFINITION \u2014 edit name, age, heritage, face, hair, body, wardrobe, anchors",
+      "pos": [
+        390,
+        90
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "CHARACTER_NAME, [age], [heritage], [face shape and distinctive features], [hair], [body type], [practical canonical clothing and palette], [two visual anchors]; front or near-front full body documentary character reference in a quiet lived-in Habitat Sol interior; practical layered repaired clothing; emotionally neutral observant expression; HABITAT SOL VISUAL RULES \u2014 documentary realism, not fashion photography; intimate and observational, never heroic; worn, maintained and repaired civilian habitats; used civic technology, not magical equipment; no glossy generic sci-fi, military space opera, superhero poses, orange/teal grading, or readable generated text; practical layered repaired clothing specific to the person; children and teenagers are always age-appropriate and non-sexualized; Mars is a lived-in town; faces and human situations matter more than equipment."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "title": "NEGATIVE PROMPT",
+      "pos": [
+        390,
+        360
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "low quality, blurry, plastic skin, waxy skin, anime, cartoon, fashion editorial, glossy generic science-fiction, military space opera, superhero pose, spacesuit glamour, orange and teal color grade, readable text, logo, watermark, deformed hands, extra fingers, duplicate people, cropped face"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "EmptyLatentImage",
+      "title": "CANVAS \u2014 editable portrait/full-body resolution + candidates",
+      "pos": [
+        1010,
+        760
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        896,
+        1152,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "type": "KSampler",
+      "title": "GENERATION \u2014 seed / steps / CFG / sampler / scheduler / denoise",
+      "pos": [
+        1420,
+        250
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        2407187,
+        "fixed",
+        30,
+        4.5,
+        "dpmpp_2m_sde",
+        "karras",
+        1.0
+      ]
+    },
+    {
+      "id": 6,
+      "type": "VAEDecode",
+      "title": "DECODE",
+      "pos": [
+        1880,
+        270
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "SaveImage",
+      "title": "SAVE CANDIDATES \u2014 change CHARACTER_NAME",
+      "pos": [
+        3150,
+        260
+      ],
+      "size": [
+        315,
+        110
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "habitat-sol/characters/CHARACTER_NAME/candidates"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      1,
+      1,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      1,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      2,
+      0,
+      5,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      3,
+      0,
+      5,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      4,
+      0,
+      5,
+      3,
+      "LATENT"
+    ],
+    [
+      7,
+      5,
+      0,
+      6,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      1,
+      2,
+      6,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "1 \u2014 Character Definition",
+      "bounding": [
+        20,
+        20,
+        1010,
+        600
+      ],
+      "color": "#805c3b",
+      "font_size": 22,
+      "properties": {
+        "description": "Edit the stable identity description and candidate count. HABITAT SOL VISUAL RULES \u2014 documentary realism, not fashion photography; intimate and observational, never heroic; worn, maintained and repaired civilian habitats; used civic technology, not magical equipment; no glossy generic sci-fi, military space opera, superhero poses, orange/teal grading, or readable generated text; practical layered repaired clothing specific to the person; children and teenagers are always age-appropriate and non-sexualized; Mars is a lived-in town; faces and human situations matter more than equipment."
+      }
+    },
+    {
+      "title": "2 \u2014 Model and Style",
+      "bounding": [
+        20,
+        660,
+        900,
+        420
+      ],
+      "color": "#526d5d",
+      "font_size": 22,
+      "properties": {
+        "description": "IntoRealism Ultra v4.0 SDXL defaults: 896\u00d71152, 30 steps, DPM++ 2M SDE, Karras, CFG 4.5."
+      }
+    },
+    {
+      "title": "3 \u2014 Optional Pose",
+      "bounding": [
+        970,
+        660,
+        350,
+        420
+      ],
+      "color": "#526d5d",
+      "font_size": 22,
+      "properties": {
+        "description": "This first version is prompt-led. Use the episode workflow for supplied ControlNet pose/depth maps."
+      }
+    },
+    {
+      "title": "4 \u2014 Generation",
+      "bounding": [
+        1370,
+        20,
+        900,
+        600
+      ],
+      "color": "#3e627c",
+      "font_size": 22,
+      "properties": {
+        "description": "Batch size creates candidate variations. Keep the seed fixed while comparing prompt changes."
+      }
+    },
+    {
+      "title": "5 \u2014 Face Review",
+      "bounding": [
+        2320,
+        20,
+        750,
+        600
+      ],
+      "color": "#8a5f52",
+      "font_size": 22,
+      "properties": {
+        "description": "Review face, hands, hair and clothing at full size. Use 04_repair_character_region.json for a targeted identity-conditioned correction; automatic FaceFixerOpenCV is excluded because its live dependency is broken."
+      }
+    },
+    {
+      "title": "6 \u2014 Output",
+      "bounding": [
+        3120,
+        20,
+        380,
+        600
+      ],
+      "color": "#6a6a6a",
+      "font_size": 22,
+      "properties": {
+        "description": "Approve a front/near-front portrait, three-quarter portrait, full body, neutral environment, expression variation, and canonical outfit variation before episode production."
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "habitat_sol_notes": "Character-reference creation. HABITAT SOL VISUAL RULES \u2014 documentary realism, not fashion photography; intimate and observational, never heroic; worn, maintained and repaired civilian habitats; used civic technology, not magical equipment; no glossy generic sci-fi, military space opera, superhero poses, orange/teal grading, or readable generated text; practical layered repaired clothing specific to the person; children and teenagers are always age-appropriate and non-sexualized; Mars is a lived-in town; faces and human situations matter more than equipment."
+  },
+  "version": 0.4
+}
