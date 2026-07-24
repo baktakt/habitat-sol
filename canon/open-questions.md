@@ -4,8 +4,8 @@ Canon questions to resolve later.
 
 ## World timeline
 
-- What exact year does the story begin?
-- How old is Habitat Sol?
+- **Main story year: 2187 CE.** See [Timeline](timeline.md).
+- What is Habitat Sol's exact founding year and age at story opening?
 - Was Sol founded by a coalition, corporation, state program, or settlement compact?
 - How independent is Mars politically from Earth?
 

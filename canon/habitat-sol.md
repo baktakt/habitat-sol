@@ -11,6 +11,7 @@ Habitat Sol is the first permanent civilian settlement on Mars and the emotional
 | Official name | Habitat Sol |
 | Common names | Sol, Old Sol |
 | Population | approximately 2,000 |
+| Story present | 2187 CE |
 | Identity | oldest civilian town on Mars |
 | Character | intimate, historic, worn, civic-minded, stubborn |
 | Narrative function | pressure cooker, memory palace, small town, origin myth |
