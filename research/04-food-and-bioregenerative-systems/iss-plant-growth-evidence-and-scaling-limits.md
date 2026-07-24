@@ -14,6 +14,8 @@ Fresh edible crops have been grown and eaten on the ISS, demonstrating that cont
 - **Crop food safety is an active operational concern.** NASA reports that the Veggie work monitors for harmful microbes and that no harmful contamination had been detected in the crops discussed on its page. [1]
 - **Plant roots need deliberately managed water, nutrients and oxygen.** NASA describes Veggie’s clay-based growth media and fertilizer, and the Advanced Plant Habitat’s porous clay substrate, controlled-release fertilizer and automated environmental control. [1][2]
 - **Automation can reduce routine crew labour but adds technical complexity.** NASA describes the Advanced Plant Habitat as using cameras and more than 180 sensors, with automated water distribution, atmosphere, moisture and temperature control. [1]
+- **Edible is not the same as nutritionally identical or diet-complete.** A peer-reviewed Veggie study of red romaine lettuce found negative screens for selected human pathogens, while flight and ground tissues differed in several elemental and phenolic measures. The researchers frame fresh crops as a supplement to packaged food. [3]
+- **The APH has demonstrated tightly controlled experimental crop environments, not autonomous settlement farming.** Its ISS validation controlled light intensity/spectrum, humidity, CO₂, photoperiod, temperature and root-zone moisture; wheat’s transpiration tested water recovery by condensation. [4]
 
 ## Constraints and uncertainties
 
@@ -31,4 +33,5 @@ Fresh edible crops have been grown and eaten on the ISS, demonstrating that cont
 
 1. NASA, *Growing Plants in Space* (accessed 2026-07-24). https://www.nasa.gov/exploration-research-and-technology/growing-plants-in-space/
 2. NASA, *Advanced Plant Habitat* (accessed 2026-07-24). https://science.nasa.gov/mission/advanced-plant-habitat/
-3. Ehrlich, J. W. et al., *Plant Growth Optimization by Vegetable Production System (Veggie) Root Zone Hydration* (2017), NASA Technical Reports Server (accessed 2026-07-24). https://ntrs.nasa.gov/api/citations/20170007809/downloads/20170007809.pdf
+3. Khodadad, C. L. M. et al., *Microbiological and Nutritional Analysis of Lettuce Crops Grown on the International Space Station*, Frontiers in Plant Science (2020). https://doi.org/10.3389/fpls.2020.00199
+4. Monje, O. et al., *Hardware Validation of the Advanced Plant Habitat on ISS: Canopy Photosynthesis in Reduced Gravity*, Frontiers in Plant Science (2020). https://doi.org/10.3389/fpls.2020.00673

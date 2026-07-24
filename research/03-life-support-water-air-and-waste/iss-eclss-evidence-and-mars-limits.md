@@ -13,6 +13,9 @@ The ISS demonstrates that a crewed spacecraft can recover a high fraction of wat
 - **The ISS ECLSS contains separate air and water systems.** NASA describes water processing and recovery, oxygen generation through electrolysis, carbon-dioxide removal, and trace-contaminant control as parts of the system. [1]
 - **NASA reports approximately 98% water recovery on the ISS.** This is achieved by reclaiming water from sources including humidity condensate and urine; it materially reduces—but does not eliminate—resupply demand. [2]
 - **NASA’s exploration ECLSS work targets high recovery while recognising system trade-offs.** A NASA technical paper describes the need for high recovery, reliability, maintainability and reduced logistics burden for exploration systems. [3]
+- **The ISS water system is an actively maintained system, not a magic percentage.** It collects urine, humidity condensate and Sabatier product water for drinking, hygiene, oxygen generation and other uses. The 2023 operational status paper documents precipitation constraints, component replacements and other maintenance issues. [4]
+- **A basic human water figure is not a habitat water budget.** NASA’s human-centred ECLSS brief gives a minimum 2.5 L potable water per crewmember per day for hydration; hygiene, food preparation, medical/EVA needs and equipment loads are additional. [5]
+- **Atmospheric requirements are coupled.** NASA’s human-centred brief treats oxygen, CO₂, inert diluent gas, ventilation, humidity, temperature, particulates, contamination monitoring and emergency response as linked ECLSS responsibilities—not independent utilities. [5]
 
 ## Constraints and uncertainties
 
@@ -31,3 +34,5 @@ The ISS demonstrates that a crewed spacecraft can recover a high fraction of wat
 1. NASA, *Environmental Control & Life Support Systems* (accessed 2026-07-24). https://www.nasa.gov/wp-content/uploads/2015/02/g-583661_smith_cs20.pdf
 2. NASA, *Environmental Control and Life Support System* (accessed 2026-07-24). https://www.nasa.gov/wp-content/uploads/2025/08/g-657270-59-hp-environmental-control-and-life-support-system-eclss.pdf
 3. NASA, *Environmental Control and Life Support (ECLS) Systems*, NASA Technical Reports Server, 2021 (accessed 2026-07-24). https://ntrs.nasa.gov/api/citations/20210010644/downloads/132-1-Final.pdf
+4. Williamson, J. et al., *Status of ISS Water Management and Recovery*, NASA Technical Reports Server, 2023; operational status through March 2022 (accessed 2026-07-24). https://ntrs.nasa.gov/api/citations/20230006217/downloads/ICES%202023-097%20Status%20of%20ISS%20Water%20Management%20and%20Recovery.pdf
+5. NASA Office of the Chief Health & Medical Officer, *Environmental Control & Life Support System (ECLSS): Human-Centered Approach*, 2023 (accessed 2026-07-24). https://www.nasa.gov/wp-content/uploads/2023/07/eclss-technical-brief-ochmo.pdf

@@ -15,6 +15,8 @@ Mars is not a place where wind loads behave like terrestrial hurricanes: its atm
 - **The main risk from a large dust storm is not hurricane-like force on a pressure habitat.** NASA explains that the low atmospheric density greatly reduces aerodynamic force, even when wind speeds are substantial. [3]
 - **Dust is an energy and maintenance problem.** Dust in the atmosphere reduces surface sunlight; deposited particles can coat solar panels and enter or foul moving equipment. NASA rover operations have had to conserve power or wait out severe dust conditions. [3]
 - **Mars lacks Earth’s ozone layer.** NASA identifies surface ultraviolet exposure and the broader radiation environment as design concerns for suits and habitats. [2]
+- **Curiosity’s Radiation Assessment Detector provides an unshielded surface baseline, not a habitat dose.** During about 300 days near solar maximum at Gale Crater, it measured a GCR dose-equivalent rate of 0.64 ± 0.12 mSv/day. Solar activity, elevation, atmospheric depth, and habitat shielding can materially change the crew-relevant value. [4]
+- **Dust exposure is a health as well as a maintenance concern.** NASA’s current habitable-air requirement for Martian particles below 10 μm is a 24-hour time-weighted average below 0.1 mg/m³ for exposure scenarios up to 30 days; NASA does not present it as a validated long-duration residence limit. [5]
 
 ## Constraints and uncertainties
 
@@ -33,3 +35,5 @@ Mars is not a place where wind loads behave like terrestrial hurricanes: its atm
 1. NASA, *Mars Facts* (accessed 2026-07-24). https://science.nasa.gov/mars/facts/
 2. NASA, *Mars Exploration Science Goals* (accessed 2026-07-24). https://science.nasa.gov/planetary-science/programs/mars-exploration/science-goals/
 3. NASA, *The Fact and Fiction of Martian Dust Storms*, originally published 2015, updated 2026-03-18 (accessed 2026-07-24). https://www.nasa.gov/solar-system/the-fact-and-fiction-of-martian-dust-storms/
+4. Hassler, D. M. et al., *Mars’ Surface Radiation Environment Measured with the Mars Science Laboratory’s Curiosity Rover*, Science (2014). https://doi.org/10.1126/science.1244797
+5. NASA, *Establishing Crew Exposure Limits of Martian Dust*, updated 2026-07-21 (accessed 2026-07-24). https://www.nasa.gov/general/establishing-crew-exposure-limits-of-martian-dust/
