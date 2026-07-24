@@ -34,6 +34,7 @@ locations/      Recurring settings inside and outside Habitat Sol.
 episodes/       Daily episode drafts and production records.
 art-direction/  Visual language, references, and style rules.
 comfyui/        Workflow notes, prompt templates, character/location sheets.
+research/       Science-backed Mars reference library for writers; evidence, constraints, and explicit extrapolations.
 commerce/       Editions, prints, digital provenance, and NFT positioning.
 meta/           Decisions, changelog, contribution notes, open questions.
 ```
