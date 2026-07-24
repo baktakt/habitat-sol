@@ -72,7 +72,7 @@ With Kenji she shares a repair-person's marriage: love expressed as pre-packed t
 
 Kenji was born somewhere that already treated Earth as a destination rather than a home. Lunar orbit, a transfer habitat, or another off-Earth environment remains deliberately open canon, but he grew up with the idea that bodies are shaped by gravity bargains. He came to Sol through machines: rovers, seals, exterior manipulators, thermal loops, the ugly practical devices that make heroism unnecessary.
 
-He is beloved because he makes frightening systems feel approachable. He explains malfunctions with jokes, teaches children the names of tools, and can tell from a motor's vibration whether a repair will take ten minutes or ruin the day. His hands are scarred, dry, and careful.
+He is beloved because he makes frightening systems feel approachable. He explains malfunctions with jokes, teaches children the names of tools, and can tell from a motor's vibration whether a repair will take ten minutes or ruin the day. His hands are scarred, dry, and careful. He keeps obsolete tools that belonged to the first repair crews.
 
 His private longing is Earth. Not the ideological Earth in Safi's drawings or the commercial Earth of travel feeds, but a physical planet he may no longer tolerate. He hides medical concerns because he does not want longing turned into pity.
 

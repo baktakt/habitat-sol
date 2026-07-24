@@ -47,3 +47,25 @@ Safi and Elena.
 Elena realizes Safi has never heard uncontrolled water.
 
 **No required ending**
+
+---
+
+## The birthday queue
+
+**Situation**
+
+Someone continues receiving birthday messages from a dead relative because an archive automation is still running.
+
+**Emotion**
+
+Grief complicated by the tenderness and intrusion of an ordinary system doing exactly what it was told.
+
+**Character**
+
+Open.
+
+**Question or tension**
+
+Who is responsible for stopping a message that has become part of a person's mourning?
+
+**No required ending**

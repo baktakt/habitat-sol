@@ -56,6 +56,28 @@ Travel is routine for some professionals but expensive and emotionally significa
 - journey durations;
 - booking systems.
 
+## Decision: Earth oceans through Mars-born eyes
+
+**Status:** provisional
+
+**Why it matters**
+
+Earth nostalgia and Mars identity should not be assumed to mean the same thing across generations.
+
+**Chosen direction**
+
+Some people born on Mars may find Earth oceans disturbing rather than beautiful.
+
+**Consequences**
+
+- Earth imagery can evoke unease as well as longing;
+- a Mars-born character may experience open water as alien, excessive, or unsafe.
+
+**Still open**
+
+- how common this response is;
+- which stories, if any, make it specific to a character.
+
 ## Priority world systems
 
 Only define these when a story needs them:

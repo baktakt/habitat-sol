@@ -1,4 +1,53 @@
 {
   "schema_version": 1,
-  "items": {}
+  "items": {
+    "2ebe591f806031bd65a9e2eb5615cfda6c7873273260e2858180d4302be3a320": {
+      "normalized_text": "[WORLD] Maybe people born on Mars find Earth oceans disturbing rather than beautiful.",
+      "source_line_at_processing": 19,
+      "processed_at": "2026-07-24T17:11:00+00:00",
+      "disposition": "provisional-decision",
+      "destinations": [
+        "writers-input/04-world-decisions.md"
+      ],
+      "rationale": "Recorded the Mars-born ocean response as a provisional world direction."
+    },
+    "c2b7705a66d52c22d954bcda9da0f555801a4d3d89eda4ea017e664406cf5ffe": {
+      "normalized_text": "[CHARACTER] Kenji keeps obsolete tools because they belonged to the first repair crews.",
+      "source_line_at_processing": 20,
+      "processed_at": "2026-07-24T17:11:00+00:00",
+      "disposition": "canon-clarification",
+      "destinations": [
+        "characters/varga-sato-family.md"
+      ],
+      "rationale": "Clarified Kenji's established repair-oriented characterization without changing his history."
+    },
+    "3e370c61f36d8a464e12371beb9628885b09f47f51ccf460dd88c54899ed5bdd": {
+      "normalized_text": "[SEED] Someone continues receiving birthday messages from a dead relative because of an archive automation.",
+      "source_line_at_processing": 21,
+      "processed_at": "2026-07-24T17:11:00+00:00",
+      "disposition": "story-seed",
+      "destinations": [
+        "writers-input/06-story-seeds.md"
+      ],
+      "rationale": "Placed the archival-grief situation in the seed bank without prescribing an ending."
+    },
+    "20b1c135faa31d3eec14c7b511646951620036a6746d7c0e7a9a90fc5532e887": {
+      "normalized_text": "[WORLD] Sol teenagers call heritage tourists something mildly insulting.",
+      "source_line_at_processing": 22,
+      "processed_at": "2026-07-24T17:11:00+00:00",
+      "disposition": "duplicate/no-change",
+      "destinations": [],
+      "rationale": "Existing canon already establishes heritage tourism and Sol's outsider resentment; no specific slang was supplied."
+    },
+    "4b2326d4aeb171a2eee9e35d5b3a0bb9559dd394162acaeca1b8275b79d10eff": {
+      "normalized_text": "[DISLIKE] Avoid obvious Mars language such as “the red planet.”",
+      "source_line_at_processing": 23,
+      "processed_at": "2026-07-24T17:11:00+00:00",
+      "disposition": "writer-guidance",
+      "destinations": [
+        "writers-input/01-north-star.md"
+      ],
+      "rationale": "Added the creator's language boundary to the North Star creative boundaries."
+    }
+  }
 }

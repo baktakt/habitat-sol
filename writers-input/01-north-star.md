@@ -46,6 +46,6 @@ Readers should feel:
 
 _Things that should never appear, or should only appear in very specific ways._
 
-- 
+- Avoid obvious Mars shorthand such as “the red planet.”
 - 
 - 
