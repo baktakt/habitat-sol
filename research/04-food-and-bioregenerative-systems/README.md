@@ -8,7 +8,11 @@ Reference material for feeding a settlement: stored food, controlled-environment
 - How much area, energy, water, labour, and technical skill does a crop system require?
 - How do harvest failures shape rationing, trade, celebration, and social status?
 
-## Recommended note names
+## Current notes
+
+- [ISS Plant-Growth Evidence and Scaling Limits](iss-plant-growth-evidence-and-scaling-limits.md)
+
+## Suggested future note names
 
 - `controlled-environment-agriculture-on-mars.md`
 - `crop-calories-area-energy-and-labour.md`

@@ -1,8 +1,6 @@
 # Habitat Sol — Science Reference Library
 
-This directory is the writers’ evidence base for life on Mars. It records real, attributable research and turns it into practical story constraints, opportunities, and carefully labelled extrapolations.
-
-> **Relationship to `writers-input/`:** `writers-input/` is the creative sandbox: ideas, character notes, scenes, story arcs, and unresolved questions. This directory is the reference library. Writers may begin in either place, but scientific claims used to resolve a question should be captured here with a source.
+This directory is a source-backed knowledge base for Mars, space exploration, and long-duration habitat living. It records real, attributable research and turns it into practical constraints, operational context, and carefully labelled extrapolations.
 
 ## How to use this library
 

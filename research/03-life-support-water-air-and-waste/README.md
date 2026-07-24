@@ -9,7 +9,11 @@ Reference material for closed or partially closed habitat systems: atmosphere ma
 - How much redundancy, maintenance work, and reserve capacity make a settlement believable?
 - Which resources are socially controlled because they are life-critical?
 
-## Recommended note names
+## Current notes
+
+- [ISS ECLSS Evidence and Mars Limits](iss-eclss-evidence-and-mars-limits.md)
+
+## Suggested future note names
 
 - `atmosphere-management-and-emergency-timelines.md`
 - `water-recovery-storage-and-losses.md`

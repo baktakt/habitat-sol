@@ -9,7 +9,11 @@ Reference material for the physical planet: atmosphere and pressure, temperature
 - Where is water realistically accessible, and what does extracting it cost?
 - How do latitude, elevation, season, and local terrain change the answer?
 
-## Recommended note names
+## Current notes
+
+- [Dust, Thin Air and Surface Operations](dust-atmosphere-and-surface-operations.md)
+
+## Suggested future note names
 
 - `martian-atmosphere-pressure-and-thermal-environment.md`
 - `dust-storms-and-dust-mitigation.md`
