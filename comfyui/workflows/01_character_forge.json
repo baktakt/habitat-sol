@@ -1,17 +1,17 @@
 {
-  "last_node_id": 46,
-  "last_link_id": 66,
+  "last_node_id": 29,
+  "last_link_id": 41,
   "nodes": [
     {
       "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "title": "BASE MODEL \u2014 Flux Dev FP8 (tested)",
+      "type": "UNETLoader",
+      "title": "Load Qwen Image 2512",
       "pos": [
-        30,
-        260
+        -900,
+        -120
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -23,150 +23,106 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            1
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            2
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            15,
-            25,
-            35,
-            45,
-            55,
-            65
+            3,
+            11,
+            19,
+            27,
+            35
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
+        "Node name for S&R": "UNETLoader"
       },
       "widgets_values": [
-        "FLUX1/flux1-dev-fp8.safetensors"
+        "qwen_image_2512_fp8_e4m3fn.safetensors",
+        "default"
       ]
     },
     {
       "id": 2,
-      "type": "LoraLoader",
-      "title": "STYLE \u2014 Krea2-realism-V1.safetensors",
+      "type": "CLIPLoader",
+      "title": "Load Qwen 2.5 VL text encoder",
       "pos": [
-        360,
-        260
+        -900,
+        20
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
       "order": 1,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 2
-        }
-      ],
+      "inputs": [],
       "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            3
-          ]
-        },
         {
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            4
+            1,
+            2,
+            10,
+            18,
+            26,
+            34
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "LoraLoader"
+        "Node name for S&R": "CLIPLoader"
       },
       "widgets_values": [
-        "Krea2-realism-V1.safetensors",
-        0.35,
-        0.35
+        "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "default"
       ]
     },
     {
       "id": 3,
-      "type": "LoraLoader",
-      "title": "STYLE \u2014 HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
+      "type": "VAELoader",
+      "title": "Load Qwen Image VAE",
       "pos": [
-        690,
-        260
+        -900,
+        160
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
       "order": 2,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 3
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 4
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "VAE",
+          "type": "VAE",
           "links": [
-            5
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            6
+            8,
+            16,
+            24,
+            32,
+            40
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "LoraLoader"
+        "Node name for S&R": "VAELoader"
       },
       "widgets_values": [
-        "HabitatSol/Portrait-Engine-FLUX-v1.safetensors",
-        0.25,
-        0.25
+        "qwen_image_vae.safetensors"
       ]
     },
     {
       "id": 4,
-      "type": "LoraLoader",
-      "title": "STYLE \u2014 HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
+      "type": "CLIPTextEncode",
+      "title": "Shared negative prompt",
       "pos": [
-        1020,
-        260
+        -520,
+        -200
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -174,68 +130,42 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 5
-        },
-        {
           "name": "clip",
           "type": "CLIP",
-          "link": 6
+          "link": 1
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
           "links": [
-            9,
-            19,
+            5,
+            13,
+            21,
             29,
-            39,
-            49,
-            59
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            7,
-            8,
-            17,
-            18,
-            27,
-            28,
-            37,
-            38,
-            47,
-            48,
-            57,
-            58
+            37
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "LoraLoader"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "HabitatSol/ck-Sommo-Concept-Art-FLUX.safetensors",
-        0.18,
-        0.18
+        "cartoon, anime, painting, illustration, glamour photography, fashion editorial, plastic skin, waxy skin, bad anatomy, deformed hands, extra fingers, duplicate person, cross-eyed, unreadable text, logo, watermark, armor, superhero, military sci-fi, glossy spaceship set"
       ]
     },
     {
       "id": 5,
-      "type": "CLIPTextEncodeFlux",
-      "title": "1 \u2014 01_front_portrait: edit identity and shot",
+      "type": "CLIPTextEncode",
+      "title": "Front Portrait prompt",
       "pos": [
-        1450,
-        40
+        -500,
+        -360
       ],
       "size": [
-        450,
-        170
+        320,
+        110
       ],
       "flags": {},
       "order": 4,
@@ -244,7 +174,7 @@
         {
           "name": "clip",
           "type": "CLIP",
-          "link": 7
+          "link": 2
         }
       ],
       "outputs": [
@@ -252,69 +182,61 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            10
+            4
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. front or near-front head-and-shoulders portrait, neutral expression, plain worn civic corridor background, both eyes clearly visible",
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. front or near-front head-and-shoulders portrait, neutral expression, plain worn civic corridor background, both eyes clearly visible",
-        3.5
+        "Amara Okonkwo, 39-year-old Black woman, warm brown skin, close natural coiled hair, oval face, defined cheekbones, tired intelligent dark-brown eyes, composed observant presence; practical ochre civic jacket over charcoal thermal layers with repaired cuffs and small abstract civic pin; ultra realistic documentary photography, natural untreated skin with visible pores, subtle facial asymmetry, realistic fabric texture, grounded practical lighting, maintained but aging Habitat Sol civic interior, no glamour, no armor, no readable text. front-facing chest-up reference portrait, shoulders square, neutral expression, both eyes unobstructed"
       ]
     },
     {
       "id": 6,
-      "type": "CLIPTextEncodeFlux",
-      "title": "1 \u2014 NEGATIVE",
+      "type": "EmptyLatentImage",
+      "title": "Front Portrait latent",
       "pos": [
-        1450,
-        220
+        -80,
+        -360
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
       "order": 5,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 8
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            11
+            6
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
+        "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
-        "",
-        "anime, cartoon, concept art, illustration, glossy generic science fiction, military space opera, fashion editorial, superhero pose, readable text, logo, watermark, plastic skin, deformed hands, extra fingers, duplicate person",
-        3.5
+        1104,
+        1472,
+        2
       ]
     },
     {
       "id": 7,
-      "type": "ModelSamplingFlux",
-      "title": "1 \u2014 Flux canvas settings",
+      "type": "KSampler",
+      "title": "Front Portrait sampler",
       "pos": [
-        1940,
-        40
+        280,
+        -360
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -324,72 +246,97 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 9
-        }
-      ],
-      "outputs": [
+          "link": 3
+        },
         {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            12
-          ]
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 6
         }
       ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.15,
-        0.5,
-        832,
-        1216
-      ]
-    },
-    {
-      "id": 8,
-      "type": "EmptyLatentImage",
-      "title": "1 \u2014 832\u00d71216 reference frame",
-      "pos": [
-        1940,
-        170
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
       "outputs": [
         {
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            13
+            7
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "EmptyLatentImage"
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        832,
-        1216,
-        1
+        11111111,
+        "fixed",
+        50,
+        4.0,
+        "euler",
+        "simple",
+        1.0
       ]
     },
     {
-      "id": 9,
-      "type": "KSampler",
-      "title": "1 \u2014 generate; change seed for alternate",
+      "id": 8,
+      "type": "VAEDecode",
+      "title": "Front Portrait decode",
       "pos": [
-        2280,
-        40
+        640,
+        -360
       ],
       "size": [
-        310,
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "title": "Front Portrait save",
+      "pos": [
+        900,
+        -360
+      ],
+      "size": [
+        320,
         110
       ],
       "flags": {},
@@ -397,26 +344,73 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 12
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 10
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 11
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 13
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
         }
       ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "habitat-sol/characters/CHARACTER_NAME/front_portrait"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "CLIPTextEncode",
+      "title": "Three-Quarter prompt",
+      "pos": [
+        -500,
+        -60
+      ],
+      "size": [
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Amara Okonkwo, 39-year-old Black woman, warm brown skin, close natural coiled hair, oval face, defined cheekbones, tired intelligent dark-brown eyes, composed observant presence; practical ochre civic jacket over charcoal thermal layers with repaired cuffs and small abstract civic pin; ultra realistic documentary photography, natural untreated skin with visible pores, subtle facial asymmetry, realistic fabric texture, grounded practical lighting, maintained but aging Habitat Sol civic interior, no glamour, no armor, no readable text. three-quarter torso portrait, shoulders slightly left and head toward camera, calm thoughtful expression"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "EmptyLatentImage",
+      "title": "Three-Quarter latent",
+      "pos": [
+        -80,
+        -60
+      ],
+      "size": [
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
       "outputs": [
         {
           "name": "LATENT",
@@ -427,43 +421,98 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1104,
+        1472,
+        2
+      ]
+    },
+    {
+      "id": 12,
+      "type": "KSampler",
+      "title": "Three-Quarter sampler",
+      "pos": [
+        280,
+        -60
+      ],
+      "size": [
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 11
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 13
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        8291791398777243546,
+        22222222,
         "fixed",
-        22,
-        1.0,
+        50,
+        4.0,
         "euler",
         "simple",
         1.0
       ]
     },
     {
-      "id": 10,
+      "id": 13,
       "type": "VAEDecode",
-      "title": "1 \u2014 decode",
+      "title": "Three-Quarter decode",
       "pos": [
-        2620,
-        40
+        640,
+        -60
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 9,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 14
+          "link": 15
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 15
+          "link": 16
         }
       ],
       "outputs": [
@@ -471,7 +520,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            16
+            17
           ]
         }
       ],
@@ -481,25 +530,25 @@
       "widgets_values": []
     },
     {
-      "id": 11,
+      "id": 14,
       "type": "SaveImage",
-      "title": "1 \u2014 save approved candidate",
+      "title": "Three-Quarter save",
       "pos": [
-        2960,
-        40
+        900,
+        -60
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 10,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 16
+          "link": 17
         }
       ],
       "outputs": [],
@@ -507,63 +556,23 @@
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "habitat-sol/characters/CHARACTER_NAME/references/01_front_portrait"
+        "habitat-sol/characters/CHARACTER_NAME/three_quarter"
       ]
     },
     {
-      "id": 12,
-      "type": "CLIPTextEncodeFlux",
-      "title": "2 \u2014 02_three_quarter_portrait: edit identity and shot",
+      "id": 15,
+      "type": "CLIPTextEncode",
+      "title": "Side Profile prompt",
       "pos": [
-        1450,
-        300
+        -500,
+        240
       ],
       "size": [
-        450,
-        170
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 17
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            20
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
-      },
-      "widgets_values": [
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. three-quarter portrait, seated at a mediation table, hands resting naturally on table edge, quiet attentive expression",
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. three-quarter portrait, seated at a mediation table, hands resting naturally on table edge, quiet attentive expression",
-        3.5
-      ]
-    },
-    {
-      "id": 13,
-      "type": "CLIPTextEncodeFlux",
-      "title": "2 \u2014 NEGATIVE",
-      "pos": [
-        1450,
-        480
-      ],
-      "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -577,74 +586,31 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            21
+            20
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "",
-        "anime, cartoon, concept art, illustration, glossy generic science fiction, military space opera, fashion editorial, superhero pose, readable text, logo, watermark, plastic skin, deformed hands, extra fingers, duplicate person",
-        3.5
+        "Amara Okonkwo, 39-year-old Black woman, warm brown skin, close natural coiled hair, oval face, defined cheekbones, tired intelligent dark-brown eyes, composed observant presence; practical ochre civic jacket over charcoal thermal layers with repaired cuffs and small abstract civic pin; ultra realistic documentary photography, natural untreated skin with visible pores, subtle facial asymmetry, realistic fabric texture, grounded practical lighting, maintained but aging Habitat Sol civic interior, no glamour, no armor, no readable text. clean full left side-profile head-and-shoulders reference, clear nose jawline and hairline silhouette"
       ]
     },
     {
-      "id": 14,
-      "type": "ModelSamplingFlux",
-      "title": "2 \u2014 Flux canvas settings",
-      "pos": [
-        1940,
-        300
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 19
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            22
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.15,
-        0.5,
-        832,
-        1216
-      ]
-    },
-    {
-      "id": 15,
+      "id": 16,
       "type": "EmptyLatentImage",
-      "title": "2 \u2014 832\u00d71216 reference frame",
+      "title": "Side Profile latent",
       "pos": [
-        1940,
-        430
+        -80,
+        240
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -652,7 +618,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            23
+            22
           ]
         }
       ],
@@ -660,31 +626,31 @@
         "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
-        832,
-        1216,
-        1
+        1104,
+        1472,
+        2
       ]
     },
     {
-      "id": 16,
+      "id": 17,
       "type": "KSampler",
-      "title": "2 \u2014 generate; change seed for alternate",
+      "title": "Side Profile sampler",
       "pos": [
-        2280,
-        300
+        280,
+        240
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 22
+          "link": 19
         },
         {
           "name": "positive",
@@ -699,7 +665,7 @@
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 23
+          "link": 22
         }
       ],
       "outputs": [
@@ -707,7 +673,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            24
+            23
           ]
         }
       ],
@@ -715,40 +681,40 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        8291791398777243547,
+        33333333,
         "fixed",
-        22,
-        1.0,
+        50,
+        4.0,
         "euler",
         "simple",
         1.0
       ]
     },
     {
-      "id": 17,
+      "id": 18,
       "type": "VAEDecode",
-      "title": "2 \u2014 decode",
+      "title": "Side Profile decode",
       "pos": [
-        2620,
-        300
+        640,
+        240
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 24
+          "link": 23
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 25
+          "link": 24
         }
       ],
       "outputs": [
@@ -756,7 +722,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            26
+            25
           ]
         }
       ],
@@ -766,25 +732,25 @@
       "widgets_values": []
     },
     {
-      "id": 18,
+      "id": 19,
       "type": "SaveImage",
-      "title": "2 \u2014 save approved candidate",
+      "title": "Side Profile save",
       "pos": [
-        2960,
-        300
+        900,
+        240
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 26
+          "link": 25
         }
       ],
       "outputs": [],
@@ -792,59 +758,19 @@
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "habitat-sol/characters/CHARACTER_NAME/references/02_three_quarter_portrait"
-      ]
-    },
-    {
-      "id": 19,
-      "type": "CLIPTextEncodeFlux",
-      "title": "3 \u2014 03_full_body: edit identity and shot",
-      "pos": [
-        1450,
-        560
-      ],
-      "size": [
-        450,
-        170
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 27
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            30
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
-      },
-      "widgets_values": [
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. full body standing portrait from head to boots, relaxed poised posture, complete practical outfit visible, worn council corridor",
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. full body standing portrait from head to boots, relaxed poised posture, complete practical outfit visible, worn council corridor",
-        3.5
+        "habitat-sol/characters/CHARACTER_NAME/side_profile"
       ]
     },
     {
       "id": 20,
-      "type": "CLIPTextEncodeFlux",
-      "title": "3 \u2014 NEGATIVE",
+      "type": "CLIPTextEncode",
+      "title": "Full Body prompt",
       "pos": [
-        1450,
-        740
+        -500,
+        540
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -854,7 +780,7 @@
         {
           "name": "clip",
           "type": "CLIP",
-          "link": 28
+          "link": 26
         }
       ],
       "outputs": [
@@ -862,74 +788,31 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            31
+            28
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "",
-        "anime, cartoon, concept art, illustration, glossy generic science fiction, military space opera, fashion editorial, superhero pose, readable text, logo, watermark, plastic skin, deformed hands, extra fingers, duplicate person",
-        3.5
+        "Amara Okonkwo, 39-year-old Black woman, warm brown skin, close natural coiled hair, oval face, defined cheekbones, tired intelligent dark-brown eyes, composed observant presence; practical ochre civic jacket over charcoal thermal layers with repaired cuffs and small abstract civic pin; ultra realistic documentary photography, natural untreated skin with visible pores, subtle facial asymmetry, realistic fabric texture, grounded practical lighting, maintained but aging Habitat Sol civic interior, no glamour, no armor, no readable text. full-body standing reference from head to boots, relaxed natural stance, hands visible, practical work trousers and boots"
       ]
     },
     {
       "id": 21,
-      "type": "ModelSamplingFlux",
-      "title": "3 \u2014 Flux canvas settings",
+      "type": "EmptyLatentImage",
+      "title": "Full Body latent",
       "pos": [
-        1940,
-        560
+        -80,
+        540
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
       "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 29
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            32
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.15,
-        0.5,
-        832,
-        1216
-      ]
-    },
-    {
-      "id": 22,
-      "type": "EmptyLatentImage",
-      "title": "3 \u2014 832\u00d71216 reference frame",
-      "pos": [
-        1940,
-        690
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -937,7 +820,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            33
+            30
           ]
         }
       ],
@@ -945,21 +828,80 @@
         "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
-        832,
-        1216,
-        1
+        1152,
+        1536,
+        2
+      ]
+    },
+    {
+      "id": 22,
+      "type": "KSampler",
+      "title": "Full Body sampler",
+      "pos": [
+        280,
+        540
+      ],
+      "size": [
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 27
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 28
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 29
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        44444444,
+        "fixed",
+        50,
+        4.0,
+        "euler",
+        "simple",
+        1.0
       ]
     },
     {
       "id": 23,
-      "type": "KSampler",
-      "title": "3 \u2014 generate; change seed for alternate",
+      "type": "VAEDecode",
+      "title": "Full Body decode",
       "pos": [
-        2280,
-        560
+        640,
+        540
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -967,58 +909,40 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 32
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 30
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
+          "name": "samples",
+          "type": "LATENT",
           "link": 31
         },
         {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 33
+          "name": "vae",
+          "type": "VAE",
+          "link": 32
         }
       ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            34
+            33
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "KSampler"
+        "Node name for S&R": "VAEDecode"
       },
-      "widgets_values": [
-        8291791398777243548,
-        "fixed",
-        22,
-        1.0,
-        "euler",
-        "simple",
-        1.0
-      ]
+      "widgets_values": []
     },
     {
       "id": 24,
-      "type": "VAEDecode",
-      "title": "3 \u2014 decode",
+      "type": "SaveImage",
+      "title": "Full Body save",
       "pos": [
-        2620,
-        560
+        900,
+        540
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -1026,40 +950,29 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 34
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 35
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
+          "name": "images",
           "type": "IMAGE",
-          "links": [
-            36
-          ]
+          "link": 33
         }
       ],
+      "outputs": [],
       "properties": {
-        "Node name for S&R": "VAEDecode"
+        "Node name for S&R": "SaveImage"
       },
-      "widgets_values": []
+      "widgets_values": [
+        "habitat-sol/characters/CHARACTER_NAME/full_body"
+      ]
     },
     {
       "id": 25,
-      "type": "SaveImage",
-      "title": "3 \u2014 save approved candidate",
+      "type": "CLIPTextEncode",
+      "title": "Expression prompt",
       "pos": [
-        2960,
-        560
+        -500,
+        840
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -1067,39 +980,9 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 36
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        "habitat-sol/characters/CHARACTER_NAME/references/03_full_body"
-      ]
-    },
-    {
-      "id": 26,
-      "type": "CLIPTextEncodeFlux",
-      "title": "4 \u2014 04_environment: edit identity and shot",
-      "pos": [
-        1450,
-        820
-      ],
-      "size": [
-        450,
-        170
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
           "name": "clip",
           "type": "CLIP",
-          "link": 37
+          "link": 34
         }
       ],
       "outputs": [
@@ -1107,29 +990,61 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            40
+            36
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. medium environmental portrait in a lived-in council mediation room, one hand on a table, old notices and repaired panels blurred, no readable text",
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. medium environmental portrait in a lived-in council mediation room, one hand on a table, old notices and repaired panels blurred, no readable text",
-        3.5
+        "Amara Okonkwo, 39-year-old Black woman, warm brown skin, close natural coiled hair, oval face, defined cheekbones, tired intelligent dark-brown eyes, composed observant presence; practical ochre civic jacket over charcoal thermal layers with repaired cuffs and small abstract civic pin; ultra realistic documentary photography, natural untreated skin with visible pores, subtle facial asymmetry, realistic fabric texture, grounded practical lighting, maintained but aging Habitat Sol civic interior, no glamour, no armor, no readable text. chest-up reference portrait, gentle restrained smile, candid human warmth, not exaggerated"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "EmptyLatentImage",
+      "title": "Expression latent",
+      "pos": [
+        -80,
+        840
+      ],
+      "size": [
+        320,
+        110
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1104,
+        1472,
+        2
       ]
     },
     {
       "id": 27,
-      "type": "CLIPTextEncodeFlux",
-      "title": "4 \u2014 NEGATIVE",
+      "type": "KSampler",
+      "title": "Expression sampler",
       "pos": [
-        1450,
-        1000
+        280,
+        840
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -1137,39 +1052,58 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
+          "name": "model",
+          "type": "MODEL",
+          "link": 35
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 36
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 37
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
           "link": 38
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            41
+            39
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        "",
-        "anime, cartoon, concept art, illustration, glossy generic science fiction, military space opera, fashion editorial, superhero pose, readable text, logo, watermark, plastic skin, deformed hands, extra fingers, duplicate person",
-        3.5
+        55555555,
+        "fixed",
+        50,
+        4.0,
+        "euler",
+        "simple",
+        1.0
       ]
     },
     {
       "id": 28,
-      "type": "ModelSamplingFlux",
-      "title": "4 \u2014 Flux canvas settings",
+      "type": "VAEDecode",
+      "title": "Expression decode",
       "pos": [
-        1940,
-        820
+        640,
+        840
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
@@ -1177,184 +1111,50 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
+          "name": "samples",
+          "type": "LATENT",
           "link": 39
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 40
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            42
+            41
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
+        "Node name for S&R": "VAEDecode"
       },
-      "widgets_values": [
-        1.15,
-        0.5,
-        832,
-        1216
-      ]
+      "widgets_values": []
     },
     {
       "id": 29,
-      "type": "EmptyLatentImage",
-      "title": "4 \u2014 832\u00d71216 reference frame",
+      "type": "SaveImage",
+      "title": "Expression save",
       "pos": [
-        1940,
-        950
+        900,
+        840
       ],
       "size": [
-        310,
+        320,
         110
       ],
       "flags": {},
       "order": 28,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            43
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        832,
-        1216,
-        1
-      ]
-    },
-    {
-      "id": 30,
-      "type": "KSampler",
-      "title": "4 \u2014 generate; change seed for alternate",
-      "pos": [
-        2280,
-        820
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 29,
-      "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 42
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 40
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
+          "name": "images",
+          "type": "IMAGE",
           "link": 41
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 43
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            44
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        8291791398777243549,
-        "fixed",
-        22,
-        1.0,
-        "euler",
-        "simple",
-        1.0
-      ]
-    },
-    {
-      "id": 31,
-      "type": "VAEDecode",
-      "title": "4 \u2014 decode",
-      "pos": [
-        2620,
-        820
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 44
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 45
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            46
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 32,
-      "type": "SaveImage",
-      "title": "4 \u2014 save approved candidate",
-      "pos": [
-        2960,
-        820
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 46
         }
       ],
       "outputs": [],
@@ -1362,1150 +1162,377 @@
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "habitat-sol/characters/CHARACTER_NAME/references/04_environment"
-      ]
-    },
-    {
-      "id": 33,
-      "type": "CLIPTextEncodeFlux",
-      "title": "5 \u2014 05_expression: edit identity and shot",
-      "pos": [
-        1450,
-        1080
-      ],
-      "size": [
-        450,
-        170
-      ],
-      "flags": {},
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 47
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            50
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
-      },
-      "widgets_values": [
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. close portrait, a small private smile after difficult work, same canonical hair, clothing and age",
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. close portrait, a small private smile after difficult work, same canonical hair, clothing and age",
-        3.5
-      ]
-    },
-    {
-      "id": 34,
-      "type": "CLIPTextEncodeFlux",
-      "title": "5 \u2014 NEGATIVE",
-      "pos": [
-        1450,
-        1260
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 48
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            51
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
-      },
-      "widgets_values": [
-        "",
-        "anime, cartoon, concept art, illustration, glossy generic science fiction, military space opera, fashion editorial, superhero pose, readable text, logo, watermark, plastic skin, deformed hands, extra fingers, duplicate person",
-        3.5
-      ]
-    },
-    {
-      "id": 35,
-      "type": "ModelSamplingFlux",
-      "title": "5 \u2014 Flux canvas settings",
-      "pos": [
-        1940,
-        1080
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 34,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 49
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            52
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.15,
-        0.5,
-        832,
-        1216
-      ]
-    },
-    {
-      "id": 36,
-      "type": "EmptyLatentImage",
-      "title": "5 \u2014 832\u00d71216 reference frame",
-      "pos": [
-        1940,
-        1210
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 35,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            53
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        832,
-        1216,
-        1
-      ]
-    },
-    {
-      "id": 37,
-      "type": "KSampler",
-      "title": "5 \u2014 generate; change seed for alternate",
-      "pos": [
-        2280,
-        1080
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 36,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 52
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 50
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 51
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 53
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            54
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        8291791398777243550,
-        "fixed",
-        22,
-        1.0,
-        "euler",
-        "simple",
-        1.0
-      ]
-    },
-    {
-      "id": 38,
-      "type": "VAEDecode",
-      "title": "5 \u2014 decode",
-      "pos": [
-        2620,
-        1080
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 54
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 55
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            56
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 39,
-      "type": "SaveImage",
-      "title": "5 \u2014 save approved candidate",
-      "pos": [
-        2960,
-        1080
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 38,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 56
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        "habitat-sol/characters/CHARACTER_NAME/references/05_expression"
-      ]
-    },
-    {
-      "id": 40,
-      "type": "CLIPTextEncodeFlux",
-      "title": "6 \u2014 06_canonical_outfit: edit identity and shot",
-      "pos": [
-        1450,
-        1340
-      ],
-      "size": [
-        450,
-        170
-      ],
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 57
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            60
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
-      },
-      "widgets_values": [
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. full body canonical outfit reference, ochre council jacket, dark thermal layers, repaired cuffs, soft indoor shoes, plain neutral habitat backdrop",
-        "Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member; close natural hair or short practical coiled twists, warm brown skin, tired observant eyes, composed principled expression, ochre practical council jacket over dark thermal layers with repaired cuffs, subtle abstract civic pin; Habitat Sol municipal documentary photography, a maintained repaired aging civilian Mars town, soft practical light, realistic skin texture, no readable text, no fashion glamour. full body canonical outfit reference, ochre council jacket, dark thermal layers, repaired cuffs, soft indoor shoes, plain neutral habitat backdrop",
-        3.5
-      ]
-    },
-    {
-      "id": 41,
-      "type": "CLIPTextEncodeFlux",
-      "title": "6 \u2014 NEGATIVE",
-      "pos": [
-        1450,
-        1520
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 58
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            61
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeFlux"
-      },
-      "widgets_values": [
-        "",
-        "anime, cartoon, concept art, illustration, glossy generic science fiction, military space opera, fashion editorial, superhero pose, readable text, logo, watermark, plastic skin, deformed hands, extra fingers, duplicate person",
-        3.5
-      ]
-    },
-    {
-      "id": 42,
-      "type": "ModelSamplingFlux",
-      "title": "6 \u2014 Flux canvas settings",
-      "pos": [
-        1940,
-        1340
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 41,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 59
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            62
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.15,
-        0.5,
-        832,
-        1216
-      ]
-    },
-    {
-      "id": 43,
-      "type": "EmptyLatentImage",
-      "title": "6 \u2014 832\u00d71216 reference frame",
-      "pos": [
-        1940,
-        1470
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 42,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            63
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        832,
-        1216,
-        1
-      ]
-    },
-    {
-      "id": 44,
-      "type": "KSampler",
-      "title": "6 \u2014 generate; change seed for alternate",
-      "pos": [
-        2280,
-        1340
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 43,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 62
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 60
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 61
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 63
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            64
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        8291791398777243551,
-        "fixed",
-        22,
-        1.0,
-        "euler",
-        "simple",
-        1.0
-      ]
-    },
-    {
-      "id": 45,
-      "type": "VAEDecode",
-      "title": "6 \u2014 decode",
-      "pos": [
-        2620,
-        1340
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 44,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 64
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 65
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            66
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 46,
-      "type": "SaveImage",
-      "title": "6 \u2014 save approved candidate",
-      "pos": [
-        2960,
-        1340
-      ],
-      "size": [
-        310,
-        110
-      ],
-      "flags": {},
-      "order": 45,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 66
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        "habitat-sol/characters/CHARACTER_NAME/references/06_canonical_outfit"
+        "habitat-sol/characters/CHARACTER_NAME/expression"
       ]
     }
   ],
   "links": [
     [
       1,
-      1,
-      0,
       2,
       0,
-      "MODEL"
-    ],
-    [
-      2,
-      1,
-      1,
-      2,
-      1,
+      4,
+      0,
       "CLIP"
     ],
     [
-      3,
+      2,
       2,
       0,
-      3,
-      0,
-      "MODEL"
-    ],
-    [
-      4,
-      2,
-      1,
-      3,
-      1,
-      "CLIP"
-    ],
-    [
-      5,
-      3,
-      0,
-      4,
-      0,
-      "MODEL"
-    ],
-    [
-      6,
-      3,
-      1,
-      4,
-      1,
-      "CLIP"
-    ],
-    [
-      7,
-      4,
-      1,
       5,
       0,
       "CLIP"
     ],
     [
-      8,
-      4,
+      3,
       1,
-      6,
-      0,
-      "CLIP"
-    ],
-    [
-      9,
-      4,
       0,
       7,
       0,
       "MODEL"
     ],
     [
-      10,
+      4,
       5,
       0,
-      9,
+      7,
       1,
       "CONDITIONING"
     ],
     [
-      11,
-      6,
+      5,
+      4,
       0,
-      9,
+      7,
       2,
       "CONDITIONING"
     ],
     [
-      12,
+      6,
+      6,
+      0,
       7,
-      0,
-      9,
-      0,
-      "MODEL"
-    ],
-    [
-      13,
-      8,
-      0,
-      9,
       3,
       "LATENT"
     ],
     [
-      14,
-      9,
+      7,
+      7,
       0,
-      10,
+      8,
       0,
       "LATENT"
     ],
     [
-      15,
-      1,
-      2,
-      10,
+      8,
+      3,
+      0,
+      8,
       1,
       "VAE"
     ],
     [
-      16,
-      10,
+      9,
+      8,
       0,
-      11,
+      9,
       0,
       "IMAGE"
     ],
     [
-      17,
-      4,
-      1,
-      12,
+      10,
+      2,
+      0,
+      10,
       0,
       "CLIP"
     ],
     [
-      18,
-      4,
+      11,
       1,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      12,
+      10,
+      0,
+      12,
+      1,
+      "CONDITIONING"
+    ],
+    [
       13,
+      4,
+      0,
+      12,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      11,
+      0,
+      12,
+      3,
+      "LATENT"
+    ],
+    [
+      15,
+      12,
+      0,
+      13,
+      0,
+      "LATENT"
+    ],
+    [
+      16,
+      3,
+      0,
+      13,
+      1,
+      "VAE"
+    ],
+    [
+      17,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      2,
+      0,
+      15,
       0,
       "CLIP"
     ],
     [
       19,
-      4,
+      1,
       0,
-      14,
+      17,
       0,
       "MODEL"
     ],
     [
       20,
-      12,
+      15,
       0,
-      16,
+      17,
       1,
       "CONDITIONING"
     ],
     [
       21,
-      13,
+      4,
       0,
-      16,
+      17,
       2,
       "CONDITIONING"
     ],
     [
       22,
-      14,
-      0,
       16,
       0,
-      "MODEL"
-    ],
-    [
-      23,
-      15,
-      0,
-      16,
+      17,
       3,
       "LATENT"
     ],
     [
-      24,
-      16,
-      0,
-      17,
-      0,
-      "LATENT"
-    ],
-    [
-      25,
-      1,
-      2,
-      17,
-      1,
-      "VAE"
-    ],
-    [
-      26,
+      23,
       17,
       0,
       18,
       0,
+      "LATENT"
+    ],
+    [
+      24,
+      3,
+      0,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      25,
+      18,
+      0,
+      19,
+      0,
       "IMAGE"
     ],
     [
-      27,
-      4,
-      1,
-      19,
+      26,
+      2,
+      0,
+      20,
       0,
       "CLIP"
     ],
     [
-      28,
-      4,
+      27,
       1,
+      0,
+      22,
+      0,
+      "MODEL"
+    ],
+    [
+      28,
       20,
       0,
-      "CLIP"
+      22,
+      1,
+      "CONDITIONING"
     ],
     [
       29,
       4,
       0,
-      21,
-      0,
-      "MODEL"
-    ],
-    [
-      30,
-      19,
-      0,
-      23,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      31,
-      20,
-      0,
-      23,
+      22,
       2,
       "CONDITIONING"
     ],
     [
-      32,
+      30,
       21,
       0,
-      23,
-      0,
-      "MODEL"
+      22,
+      3,
+      "LATENT"
     ],
     [
-      33,
+      31,
       22,
       0,
       23,
-      3,
+      0,
       "LATENT"
     ],
     [
-      34,
+      32,
+      3,
+      0,
+      23,
+      1,
+      "VAE"
+    ],
+    [
+      33,
       23,
       0,
       24,
       0,
-      "LATENT"
+      "IMAGE"
     ],
     [
-      35,
-      1,
+      34,
       2,
-      24,
-      1,
-      "VAE"
-    ],
-    [
-      36,
-      24,
       0,
       25,
       0,
-      "IMAGE"
-    ],
-    [
-      37,
-      4,
-      1,
-      26,
-      0,
       "CLIP"
     ],
     [
-      38,
-      4,
+      35,
       1,
+      0,
       27,
       0,
-      "CLIP"
-    ],
-    [
-      39,
-      4,
-      0,
-      28,
-      0,
       "MODEL"
     ],
     [
-      40,
-      26,
-      0,
-      30,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      41,
-      27,
-      0,
-      30,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      42,
-      28,
-      0,
-      30,
-      0,
-      "MODEL"
-    ],
-    [
-      43,
-      29,
-      0,
-      30,
-      3,
-      "LATENT"
-    ],
-    [
-      44,
-      30,
-      0,
-      31,
-      0,
-      "LATENT"
-    ],
-    [
-      45,
-      1,
-      2,
-      31,
-      1,
-      "VAE"
-    ],
-    [
-      46,
-      31,
-      0,
-      32,
-      0,
-      "IMAGE"
-    ],
-    [
-      47,
-      4,
-      1,
-      33,
-      0,
-      "CLIP"
-    ],
-    [
-      48,
-      4,
-      1,
-      34,
-      0,
-      "CLIP"
-    ],
-    [
-      49,
-      4,
-      0,
-      35,
-      0,
-      "MODEL"
-    ],
-    [
-      50,
-      33,
-      0,
-      37,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      51,
-      34,
-      0,
-      37,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      52,
-      35,
-      0,
-      37,
-      0,
-      "MODEL"
-    ],
-    [
-      53,
       36,
+      25,
       0,
+      27,
+      1,
+      "CONDITIONING"
+    ],
+    [
       37,
+      4,
+      0,
+      27,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      38,
+      26,
+      0,
+      27,
       3,
       "LATENT"
     ],
     [
-      54,
-      37,
-      0,
-      38,
-      0,
-      "LATENT"
-    ],
-    [
-      55,
-      1,
-      2,
-      38,
-      1,
-      "VAE"
-    ],
-    [
-      56,
-      38,
-      0,
       39,
+      27,
       0,
-      "IMAGE"
+      28,
+      0,
+      "LATENT"
     ],
     [
-      57,
-      4,
-      1,
       40,
-      0,
-      "CLIP"
-    ],
-    [
-      58,
-      4,
-      1,
-      41,
-      0,
-      "CLIP"
-    ],
-    [
-      59,
-      4,
-      0,
-      42,
-      0,
-      "MODEL"
-    ],
-    [
-      60,
-      40,
-      0,
-      44,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      61,
-      41,
-      0,
-      44,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      62,
-      42,
-      0,
-      44,
-      0,
-      "MODEL"
-    ],
-    [
-      63,
-      43,
-      0,
-      44,
       3,
-      "LATENT"
-    ],
-    [
-      64,
-      44,
       0,
-      45,
-      0,
-      "LATENT"
-    ],
-    [
-      65,
-      1,
-      2,
-      45,
+      28,
       1,
       "VAE"
     ],
     [
-      66,
-      45,
+      41,
+      28,
       0,
-      46,
+      29,
       0,
       "IMAGE"
     ]
   ],
   "groups": [
     {
-      "title": "1 \u2014 Tested Flux character-reference forge",
+      "title": "0 \u2014 Qwen Image model loaders",
       "bounding": [
-        10,
-        0,
-        1370,
-        1780
+        -950,
+        -250,
+        420,
+        480
       ],
-      "color": "#7a4a2b",
-      "font_size": 24,
-      "properties": {
-        "description": "Use this workflow only to establish canonical references. The Flux Dev + realism/portrait LoRA stack was visually tested and is preferred over the rejected IntoRealism result."
-      }
+      "color": "#3f789e",
+      "font_size": 24
     },
     {
-      "title": "2 \u2014 Six required reference views; review before canonizing",
+      "title": "1 \u2014 Five canonical character-reference views",
       "bounding": [
-        1410,
-        0,
-        1920,
-        1780
+        -520,
+        -420,
+        1780,
+        1700
       ],
-      "color": "#526d5d",
-      "font_size": 24,
-      "properties": {
-        "description": "Generate front, 3/4, full body, environment, expression and outfit references. Do not promote an image with readable text, wrong age, glamour styling, or an unrecognizable face."
-      }
+      "color": "#365e36",
+      "font_size": 24
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.65,
+      "scale": 0.8,
       "offset": [
-        0,
-        0
+        1000,
+        250
       ]
     },
-    "habitat_sol_notes": "Generate six deliberate reference views, manually select the canon set, then copy selected output files into characters/<slug>/references/ and commit them."
+    "info": {
+      "name": "Qwen Character Forge \u2014 Habitat Sol",
+      "description": "Generate front, three-quarter, side-profile, full-body and expression references. Edit each identity prompt before running."
+    }
   },
   "version": 0.4
 }
