@@ -21,4 +21,8 @@ Do not organize them. Do not finish them. An AI process can sort useful fragment
 - [SEED] Someone continues receiving birthday messages from a dead relative because of an archive automation.
 - [WORLD] Sol teenagers call heritage tourists something mildly insulting.
 - [DISLIKE] Avoid obvious Mars language such as “the red planet.”
-- 
+- [WORLD] The first 3 tries with manned shuttles to Mars, with the purpose to start the new colony failed, with fatal outcomes for the crews. That is why you can see the number 3 painted on walls etc in Habitat Sol, to honor the ones that did not make it.
+- [WORLD] The first sucessful landing with a habitat shuttle was in 2094, and the building of Habitat Sol started. 
+- [TRUTH] Series start in the year 2187
+- [TRUTH] Habitat Sol was founded in 2094
+- [WORLD] The current year on Mars is calculated from the Settlement Year, abbreviated SY. 

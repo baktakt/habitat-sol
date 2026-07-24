@@ -2,7 +2,7 @@
 
 ## The series is about
 
-_Write three to five sentences describing what Habitat Sol is really about without discussing technology._
+The daily life of two families in Habitat Sol, the first settlement on Mars. It's set in the year 2187, or in Mars year count, SY (Settlement Year) 93.  
 
 ## The central tension
 
@@ -14,15 +14,14 @@ _Edit this until it feels specific to Habitat Sol._
 
 Readers should feel:
 
-- 
-- 
-- 
+- curious
+- inspired
+- surprised
 
 ## Habitat Sol is
 
 - intimate
 - humane
-- materially worn
 - socially complex
 - quietly hopeful
 
@@ -39,13 +38,12 @@ Readers should feel:
 - What makes somewhere home?
 - What do children inherit from sacrifices they never chose?
 - When does preservation become stagnation?
+- What does segregation do to people, good and bad. 
 - What does a community owe the people keeping it alive?
-- 
 
 ## Creative boundaries
 
 _Things that should never appear, or should only appear in very specific ways._
 
 - Avoid obvious Mars shorthand such as “the red planet.”
-- 
-- 
+- Never use sexist or racist jokes or references. 
