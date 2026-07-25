@@ -2,6 +2,7 @@
 .DS_Store
 .idea/
 .vscode/
+scripts/__pycache__/
 
 # Generated assets / heavy files
 outputs/
