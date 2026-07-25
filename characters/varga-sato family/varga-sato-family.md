@@ -29,6 +29,8 @@ Children and teenagers must be age-appropriate and non-sexualized. Lina is sixte
 
 ### Mira Varga
 
+<img src="mira%20varga/expression_qwen_00001_%20(1).png" alt="Mira Varga, expression portrait" width="320">
+
 | Field | Detail |
 |---|---|
 | Age | 42 |
@@ -59,6 +61,8 @@ With Kenji she shares a repair-person's marriage: love expressed as pre-packed t
 > Mira Varga, 42-year-old agronomist and greenhouse systems lead, dark curly hair tied back, strong cheekbones, tired observant eyes, calm practical authority, green patched utility jumpsuit, greenhouse patch as abstract insignia, condensation-lit Mars greenhouse aisle, warm plant light, documentary realism, no readable text.
 
 ### Kenji Sato
+
+<img src="kenji%20sato/expression_qwen_00001_%20(2).png" alt="Kenji Sato, expression portrait" width="320">
 
 | Field | Detail |
 |---|---|
@@ -91,6 +95,8 @@ His private longing is Earth. Not the ideological Earth in Safi's drawings or th
 
 ### Lina Sato-Varga
 
+<img src="lina%20sato-varga/front_qwen_00001_%20(2).png" alt="Lina Sato-Varga, front portrait" width="320">
+
 | Field | Detail |
 |---|---|
 | Age | 16 |
@@ -121,6 +127,8 @@ She is not shallow. She is furious that adults mistake ambition for betrayal. Wi
 > Lina Sato-Varga, 16-year-old restless teenage girl from Habitat Sol, age-appropriate adolescent face, dark wavy hair, customized practical green jacket over orange hoodie, patched cuffs and abstract decals, direct guarded eyes, modest teenage styling adapted from metropolitan feeds, warm worn habitat corridor with blurred departure screen, documentary realism, no glamour, no readable text.
 
 ### Tomas Sato-Varga
+
+<img src="tomas%20sato-varga/front_qwen_v2_00001_%20(1).png" alt="Tomas Sato-Varga, front portrait" width="320">
 
 | Field | Detail |
 |---|---|

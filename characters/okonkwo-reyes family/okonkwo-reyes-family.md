@@ -28,6 +28,20 @@ Shared family palette:
 
 ### Amara Okonkwo
 
+<p>
+  <img src="amara%20okonkwo/front_portrait_00001_.png" alt="Amara Okonkwo, front portrait, variant 1" width="220">
+  <img src="amara%20okonkwo/front_portrait_00002_.png" alt="Amara Okonkwo, front portrait, variant 2" width="220">
+  <img src="amara%20okonkwo/three_quarter_00001_.png" alt="Amara Okonkwo, three-quarter portrait, variant 1" width="220">
+  <img src="amara%20okonkwo/three_quarter_00002_.png" alt="Amara Okonkwo, three-quarter portrait, variant 2" width="220">
+  <img src="amara%20okonkwo/side_profile_00001_.png" alt="Amara Okonkwo, side profile, variant 1" width="220">
+  <img src="amara%20okonkwo/side_profile_00002_.png" alt="Amara Okonkwo, side profile, variant 2" width="220">
+  <img src="amara%20okonkwo/expression_00001_.png" alt="Amara Okonkwo, expression study, variant 1" width="220">
+  <img src="amara%20okonkwo/expression_00002_.png" alt="Amara Okonkwo, expression study, variant 2" width="220">
+  <img src="amara%20okonkwo/expression_00002_%20(1).png" alt="Amara Okonkwo, expression study, variant 3" width="220">
+  <img src="amara%20okonkwo/full_body_00001_.png" alt="Amara Okonkwo, full-body portrait, variant 1" width="220">
+  <img src="amara%20okonkwo/full_body_00002_.png" alt="Amara Okonkwo, full-body portrait, variant 2" width="220">
+</p>
+
 | Field | Detail |
 |---|---|
 | Age | 39 |
@@ -58,6 +72,13 @@ With Elena, Amara is tender but stubborn. She knows Elena is right that Sol nost
 > Amara Okonkwo, 39-year-old Black woman, Sol-born civic mediator and Habitat Council member, close natural hair, warm tired eyes, composed principled expression, ochre practical council jacket over dark thermal layers, subtle abstract civic badge, poised posture in a worn council corridor, documentary realism, soft institutional habitat light, repaired and aging Mars town interior, no readable text.
 
 ### Elena Reyes
+
+<p>
+  <img src="elena%20reyes/front_00001_.png" alt="Elena Reyes, front portrait" width="220">
+  <img src="elena%20reyes/three-quarter_00001_.png" alt="Elena Reyes, three-quarter portrait" width="220">
+  <img src="elena%20reyes/profile_00001_.png" alt="Elena Reyes, profile portrait" width="220">
+  <img src="elena%20reyes/full-body_00001_.png" alt="Elena Reyes, full-body portrait" width="220">
+</p>
 
 | Field | Detail |
 |---|---|
@@ -90,6 +111,8 @@ Elena's relationship with Nico is careful: she refuses to turn his past into a d
 
 ### Nico Okonkwo-Reyes
 
+<img src="nico%20okonkwo-reyes/front_qwen_00001_.png" alt="Nico Okonkwo-Reyes, front portrait" width="320">
+
 | Field | Detail |
 |---|---|
 | Age | 14 |
@@ -119,6 +142,8 @@ Amara and Elena try not to overprotect him. He interprets that restraint as resp
 > Nico Okonkwo-Reyes, 14-year-old guarded adolescent boy, compact and watchful, practical layered habitat school clothes in mustard and olive, small keepsake from evacuated mining settlement, wary intelligent eyes, standing in a worn school corridor near a maintenance access panel, documentary realism, age-appropriate modest styling, no glamour, no readable text.
 
 ### Safi Okonkwo-Reyes
+
+<img src="safi%20okonkwo-reyes/front_qwen_v2_00001_.png" alt="Safi Okonkwo-Reyes, front portrait" width="320">
 
 | Field | Detail |
 |---|---|
