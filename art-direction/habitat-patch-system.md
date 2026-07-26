@@ -83,6 +83,13 @@ Use this negative prompt in the workflow:
 - ComfyUI loader: `input/habitat_sol_patch_forge_comfyui_loader.png` on the active server. It embeds the complete UI workflow and API prompt; drag/drop or open it in ComfyUI to load the forge even though the server's workflow browser is read-only from this environment.
 - Review: pass as a first Habitat Sol reference. It has no readable text or pseudo-writing; the front-on square construction, red/cream/basalt border, greenhouse arch, sprout, warm light, and repaired lower-corner seam all hold. It is intentionally a polished reference render—not final embroidery artwork.
 
+## Second render record — Habitat Meridian
+
+- Workflow: `comfyui/workflows/habitat_sol_patch_forge_api.json`, with the habitat clause replaced by the Meridian prompt above.
+- Seed: `218700601`; resolution: `768 × 768`; sampler: Euler/simple, 30 steps, CFG 4.0.
+- Output: `comfyui/patch-meridian-candidate-218700601.png`
+- Review: pass. It retains the red outer seam, dark basalt inner ring, cream routes, and visible thread of Sol’s family grammar, while shifting decisively to balanced slate/teal transit geometry and controlled civic authority. No text or pseudo-writing is present.
+
 ## Selection checks
 
 Reject a candidate if it contains accidental writing, a logo-like mark, legible numerals, militaristic heraldry, a glossy merch aesthetic, or loses the common red/basalt/cream grammar. Select only an image that reads clearly at both badge size and full resolution.
