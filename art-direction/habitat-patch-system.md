@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Generate square, **text-free fabric patch reference images** for clothing, bags, maintenance gear, civic uniforms, and props across the Martian settlement network. These are source images for later graphic simplification and embroidery—not literal patches worn by a person in the first render.
+Generate **text-free fabric patch reference images** for clothing, bags, maintenance gear, civic uniforms, and props across the Martian settlement network. Habitat Sol uses a round civic badge; the othe...[truncated]
 
 ## Shared Martian red thread
 
@@ -33,7 +33,7 @@ Use this negative prompt in the workflow:
 
 **Feeling:** first civilian town; intimate, historic, maintained through care; civic memory under constraint.
 
-> Habitat Sol patch: a simplified flat greenhouse arch built from bold moss-green and muted-ochre stitched bands, sheltering one small stylized three-leaf sprout beneath a warm amber sun-disc; calm practical civic warmth, first civilian town, old Mars, collective care; clean intact patch field with **no repair seam, no cross-shaped patch, no lower-right-corner applique, and no extra geometric mark**; **[append Prompt baseline]**
+> Habitat Sol patch: a **perfectly round** civic fabric badge with a continuous circular oxidized-red outer border, circular basalt-navy containment field, and circular dust-cream stitch ring; centered simplified flat greenhouse arch built from bold moss-green and muted-ochre stitched bands, sheltering one small stylized three-leaf sprout beneath a warm amber sun-disc; calm practical civic warmth, first civilian town, old Mars, collective care; clean intact patch field with **no repair seam, no cross-shaped patch, no lower-right-corner applique, and no extra geometric mark**; no square or rectangular patch geometry; **[append text/no-text constraints and fixed palette; do not append the square-format clause]**
 
 ### 2. Habitat Meridian — next render
 
@@ -76,12 +76,10 @@ Use this negative prompt in the workflow:
 
 - Workflow: `comfyui/workflows/05_habitat_patch_forge.json` (UI) and `comfyui/workflows/habitat_sol_patch_forge_api.json` (single-candidate API run)
 - Model: `qwen_image_2512_fp8_e4m3fn.safetensors` with `qwen_2.5_vl_7b_fp8_scaled.safetensors` and `qwen_image_vae.safetensors`
-- Seed: `218700503`
+- Seed: `218700504`
 - Resolution: `768 × 768`
 - Sampling: Euler, simple scheduler, 30 steps, CFG 4.0
-- Output: `comfyui/patch-sol-clean-frame-218700503.png` (replaces the prior graphic candidate)
-- Prompt revision: fixed series frame colours—Mars red `#9A3E2F`, basalt navy `#162B3A`, dust cream `#D6C6A6`—plus an explicit ban on repair seams, cross-shaped patches, lower-right appliques, and extra geometric marks.
-- Review: **pass**. A clean flat emblem with a rust-red border, navy field, cream inner edge, intact greenhouse arch, one sprout, and one amber sun-disc. The lower-right corner is clear: no cross patch and no diagonal repair seam; no text or pseudo-writing is present.
+- Output: `comfyui/patch-sol-round-218700504.png` (replaces the previous squa...[truncated]
 
 ## Second render record — Habitat Meridian
 
