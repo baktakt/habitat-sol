@@ -90,6 +90,17 @@ Use this negative prompt in the workflow:
 - Output: `comfyui/patch-meridian-candidate-218700601.png`
 - Review: pass. It retains the red outer seam, dark basalt inner ring, cream routes, and visible thread of Sol’s family grammar, while shifting decisively to balanced slate/teal transit geometry and controlled civic authority. No text or pseudo-writing is present.
 
+## Remaining render records
+
+All use `comfyui/workflows/habitat_sol_patch_forge_api.json` with the corresponding prompt above, `768 × 768`, Euler/simple, 30 steps, CFG 4.0, and the shared negative prompt.
+
+| Habitat | Seed | Selected reference | Review |
+|---|---:|---|---|
+| Elysium | `218700701` | `comfyui/patch-elysium-candidate-218700701.png` | **Pass** — text-free textile patch; pearl/aqua droplet, white bioform, lilac halo clearly convey refined health/biotech while retaining the shared red, cream and dark ring. |
+| Ferrum | `218700801` | `comfyui/patch-ferrum-candidate-218700801.png` | **Pass** — text-free reinforced patch; forged hexagon, furnace glow, and crossed structural beams establish durable fabrication without military heraldry. |
+| Astra | `218700901` | `comfyui/patch-astra-candidate-218700901.png` | **Pass** — text-free textile patch; open-book geometry, dark observatory ring, star field, and measured line make the research-city identity immediately legible. |
+| Arcadia | `218701001` | `comfyui/patch-arcadia-candidate-218701001.png` | **Pass** — text-free textile patch; water basin, ice crystal, and leaf form a distinct practical ecology/water identity within the family border. |
+
 ## Selection checks
 
 Reject a candidate if it contains accidental writing, a logo-like mark, legible numerals, militaristic heraldry, a glossy merch aesthetic, or loses the common red/basalt/cream grammar. Select only an image that reads clearly at both badge size and full resolution.
