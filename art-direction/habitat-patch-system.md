@@ -76,12 +76,12 @@ Use this negative prompt in the workflow:
 
 - Workflow: `comfyui/workflows/05_habitat_patch_forge.json` (UI) and `comfyui/workflows/habitat_sol_patch_forge_api.json` (single-candidate API run)
 - Model: `qwen_image_2512_fp8_e4m3fn.safetensors` with `qwen_2.5_vl_7b_fp8_scaled.safetensors` and `qwen_image_vae.safetensors`
-- Seed: `218700501`
+- Seed: `218700502`
 - Resolution: `768 × 768`
 - Sampling: Euler, simple scheduler, 30 steps, CFG 4.0
-- Output: `comfyui/patch-sol-candidate-218700501.png`
-- ComfyUI loader: `input/habitat_sol_patch_forge_comfyui_loader.png` on the active server. It embeds the complete UI workflow and API prompt; drag/drop or open it in ComfyUI to load the forge even though the server's workflow browser is read-only from this environment.
-- Review: pass as a first Habitat Sol reference. It has no readable text or pseudo-writing; the front-on square construction, red/cream/basalt border, greenhouse arch, sprout, warm light, and repaired lower-corner seam all hold. It is intentionally a polished reference render—not final embroidery artwork.
+- Output: `comfyui/patch-sol-graphic-candidate-218700502.png` (replaces the earlier photographic candidate)
+- Prompt revision: explicit reduced iconography, thread-filled colour blocks, satin-stitch outlines, flat woven field, and exclusions for photo realism, bokeh, miniature dioramas, soil, reflections, and depth.
+- Review: **pass**. It is now a graphic patch rather than a miniature photograph: a moss-green/ochre greenhouse arch, single sprout, amber sun-disc, red/cream/basalt family border, and prominent diagonal repair seam. No readable text or pseudo-writing is present.
 
 ## Second render record — Habitat Meridian
 
