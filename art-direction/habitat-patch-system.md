@@ -72,6 +72,16 @@ Use this negative prompt in the workflow:
 3. Continue in canon order: Elysium, Ferrum, Astra, Arcadia. Change one habitat-specific motif/palette at a time, so every final selection remains visibly family-related.
 4. Save selected source renders under `comfyui/patches/<habitat>/selected/` (or record an external Comfy output path) with the seed and full prompt. Treat them as references, not final production embroidery files.
 
+## First render record — Habitat Sol
+
+- Workflow: `comfyui/workflows/05_habitat_patch_forge.json` (UI) and `comfyui/workflows/habitat_sol_patch_forge_api.json` (single-candidate API run)
+- Model: `qwen_image_2512_fp8_e4m3fn.safetensors` with `qwen_2.5_vl_7b_fp8_scaled.safetensors` and `qwen_image_vae.safetensors`
+- Seed: `218700501`
+- Resolution: `768 × 768`
+- Sampling: Euler, simple scheduler, 30 steps, CFG 4.0
+- Output: `comfyui/patch-sol-candidate-218700501.png`
+- Review: pass as a first Habitat Sol reference. It has no readable text or pseudo-writing; the front-on square construction, red/cream/basalt border, greenhouse arch, sprout, warm light, and repaired lower-corner seam all hold. It is intentionally a polished reference render—not final embroidery artwork.
+
 ## Selection checks
 
 Reject a candidate if it contains accidental writing, a logo-like mark, legible numerals, militaristic heraldry, a glossy merch aesthetic, or loses the common red/basalt/cream grammar. Select only an image that reads clearly at both badge size and full resolution.

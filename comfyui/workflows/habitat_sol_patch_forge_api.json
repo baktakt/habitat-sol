@@ -1,0 +1,11 @@
+{
+  "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors", "weight_dtype": "default"}},
+  "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors", "type": "qwen_image"}},
+  "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
+  "4": {"class_type": "CLIPTextEncode", "inputs": {"text": "Habitat Sol fabric patch reference: a small warm greenhouse window and a repaired pressure-habitat arch sheltering a single sprouting plant, a faint sun-disc behind the arch; moss green, muted ochre, warm amber, faded brick red and dusty cream; visible mended seam crossing one lower corner, modest civic warmth, remembered rather than triumphant; square textile mission patch reference, front-on orthographic product-documentary view on worn neutral canvas; tactile embroidered thread and woven cloth, softly rounded corners, restrained oxidized-red outer border, dust-muted cream stitch marks, thin dark basalt containment ring; practical field-issued construction, subtle wear, physically plausible fabric and thread, no human, no clothing, no mockup, no glossy commercial product photography, no readable text.", "clip": ["2", 0]}},
+  "5": {"class_type": "CLIPTextEncode", "inputs": {"text": "readable text, letters, typography, numbers, words, logo, watermark, signature, pseudo-writing, flag, QR code, person, face, hands, clothing mockup, mannequin, glossy product advertisement, plastic texture, chrome, generic spaceship, military insignia, anime, cartoon, low quality, blurry, distorted geometry.", "clip": ["2", 0]}},
+  "6": {"class_type": "EmptyLatentImage", "inputs": {"width": 768, "height": 768, "batch_size": 1}},
+  "7": {"class_type": "KSampler", "inputs": {"seed": 218700501, "steps": 30, "cfg": 4.0, "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0, "model": ["1", 0], "positive": ["4", 0], "negative": ["5", 0], "latent_image": ["6", 0]}},
+  "8": {"class_type": "VAEDecode", "inputs": {"samples": ["7", 0], "vae": ["3", 0]}},
+  "9": {"class_type": "SaveImage", "inputs": {"filename_prefix": "habitat-sol/patches/sol/sol_patch_smoke", "images": ["8", 0]}}
+}
