@@ -80,6 +80,7 @@ Use this negative prompt in the workflow:
 - Resolution: `768 × 768`
 - Sampling: Euler, simple scheduler, 30 steps, CFG 4.0
 - Output: `comfyui/patch-sol-candidate-218700501.png`
+- ComfyUI loader: `input/habitat_sol_patch_forge_comfyui_loader.png` on the active server. It embeds the complete UI workflow and API prompt; drag/drop or open it in ComfyUI to load the forge even though the server's workflow browser is read-only from this environment.
 - Review: pass as a first Habitat Sol reference. It has no readable text or pseudo-writing; the front-on square construction, red/cream/basalt border, greenhouse arch, sprout, warm light, and repaired lower-corner seam all hold. It is intentionally a polished reference render—not final embroidery artwork.
 
 ## Selection checks
