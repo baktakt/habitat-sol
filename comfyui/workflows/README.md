@@ -23,6 +23,7 @@ Read `../../art-direction/visual-bible.md` and the named character sheet under `
 | `02_episode_single_character.json` | Place one approved character into a new episode scene using reference-image identity conditioning. | Use one to three approved references and a new story frame. |
 | `03_episode_multi_character_inpaint.json` | Make a two-character scene in staged, separate identity-conditioned inpaint passes. | Start with an approved background/composition and non-overlapping masks. |
 | `04_repair_character_region.json` | Correct one region in an approved image without regenerating the rest. | Load the approved source and paint only the failed region. |
+| `05_habitat_patch_forge.json` | Generate text-free square embroidered patch references for the Martian habitats. | Generate Habitat Sol candidates first; then change only the habitat clause to Meridian and later habitats. |
 
 ## Open and save
 
