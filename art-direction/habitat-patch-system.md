@@ -9,7 +9,7 @@ Generate square, **text-free fabric patch reference images** for clothing, bags,
 Every habitat patch follows one family grammar:
 
 - a tactile embroidered/chenille or woven-fabric badge, square format with softly rounded corners;
-- a restrained oxidized-red outer border, dust-muted cream stitch marks, and one thin dark basalt/navy containment ring;
+- **the fixed, non-negotiable frame palette on every patch:** outer border in oxidized Mars red `#9A3E2F`; inner containment ring in basalt navy `#162B3A`; stitch/edge marks in dust cream `#D6C6A6`; do not substitute a habitat-local colour in any of these three frame elements;
 - one central environmental/civic motif, one orbit/route/seal geometry, and limited local palette;
 - visible thread, slightly uneven stitching, practical field-issued construction, quiet use marks;
 - **no typography, letters, numbers, words, logos, watermarks, flags, or pseudo-writing**;
@@ -21,7 +21,7 @@ The red thread communicates a shared Martian ecosystem without making the habita
 
 Append this to each habitat-specific prompt:
 
-> square textile mission patch reference, front-on orthographic product-documentary view on worn neutral canvas; tactile embroidered thread and woven cloth, softly rounded corners, restrained oxidized-red outer border, dust-muted cream stitch marks, thin dark basalt containment ring; practical field-issued construction, subtle wear, no readable text, no letters, no numbers, no words, no logo, no watermark, no pseudo-writing, no flags; physically plausible fabric and thread, no human, no clothing, no mockup, no glossy commercial product photography.
+> square textile mission patch reference, front-on orthographic product-documentary view on worn neutral canvas; tactile embroidered thread and woven cloth, softly rounded corners; **identical standard frame across the entire Martian habitat series: outer border exactly oxidized Mars red #9A3E2F, inner containment ring exactly basalt navy #162B3A, stitch and edge marks exactly dust cream #D6C6A6; these frame colours never change and are not habitat palette accents**; practical field-issued construction, subtle wear, no readable text, no letters, no numbers, no words, no logo, no watermark, no pseudo-writing, no flags; physically plausible fabric and thread, no human, no clothing, no mockup, no glossy commercial product photography.
 
 Use this negative prompt in the workflow:
 
@@ -33,7 +33,7 @@ Use this negative prompt in the workflow:
 
 **Feeling:** first civilian town; intimate, historic, maintained through care; civic memory under constraint.
 
-> Habitat Sol patch: a small warm greenhouse window and a repaired pressure-habitat arch sheltering a single sprouting plant, a faint sun-disc behind the arch; moss green, muted ochre, warm amber, faded brick red and dusty cream; visible mended seam crossing one lower corner, modest civic warmth, remembered rather than triumphant; **[append Prompt baseline]**
+> Habitat Sol patch: a simplified flat greenhouse arch built from bold moss-green and muted-ochre stitched bands, sheltering one small stylized three-leaf sprout beneath a warm amber sun-disc; calm practical civic warmth, first civilian town, old Mars, collective care; clean intact patch field with **no repair seam, no cross-shaped patch, no lower-right-corner applique, and no extra geometric mark**; **[append Prompt baseline]**
 
 ### 2. Habitat Meridian — next render
 
@@ -76,12 +76,12 @@ Use this negative prompt in the workflow:
 
 - Workflow: `comfyui/workflows/05_habitat_patch_forge.json` (UI) and `comfyui/workflows/habitat_sol_patch_forge_api.json` (single-candidate API run)
 - Model: `qwen_image_2512_fp8_e4m3fn.safetensors` with `qwen_2.5_vl_7b_fp8_scaled.safetensors` and `qwen_image_vae.safetensors`
-- Seed: `218700502`
+- Seed: `218700503`
 - Resolution: `768 × 768`
 - Sampling: Euler, simple scheduler, 30 steps, CFG 4.0
-- Output: `comfyui/patch-sol-graphic-candidate-218700502.png` (replaces the earlier photographic candidate)
-- Prompt revision: explicit reduced iconography, thread-filled colour blocks, satin-stitch outlines, flat woven field, and exclusions for photo realism, bokeh, miniature dioramas, soil, reflections, and depth.
-- Review: **pass**. It is now a graphic patch rather than a miniature photograph: a moss-green/ochre greenhouse arch, single sprout, amber sun-disc, red/cream/basalt family border, and prominent diagonal repair seam. No readable text or pseudo-writing is present.
+- Output: `comfyui/patch-sol-clean-frame-218700503.png` (replaces the prior graphic candidate)
+- Prompt revision: fixed series frame colours—Mars red `#9A3E2F`, basalt navy `#162B3A`, dust cream `#D6C6A6`—plus an explicit ban on repair seams, cross-shaped patches, lower-right appliques, and extra geometric marks.
+- Review: **pass**. A clean flat emblem with a rust-red border, navy field, cream inner edge, intact greenhouse arch, one sprout, and one amber sun-disc. The lower-right corner is clear: no cross patch and no diagonal repair seam; no text or pseudo-writing is present.
 
 ## Second render record — Habitat Meridian
 
