@@ -78,6 +78,7 @@ With Elena, Amara is tender but stubborn. She knows Elena is right that Sol nost
   <img src="elena%20reyes/three-quarter_00001_.png" alt="Elena Reyes, three-quarter portrait" width="220">
   <img src="elena%20reyes/profile_00001_.png" alt="Elena Reyes, profile portrait" width="220">
   <img src="elena%20reyes/full-body_00001_.png" alt="Elena Reyes, full-body portrait" width="220">
+  <img src="elena%20reyes/sol-patch-workwear_00001_.png" alt="Elena Reyes in Habitat Sol clinic workwear with a single Sol patch" width="220">
 </p>
 
 | Field | Detail |
