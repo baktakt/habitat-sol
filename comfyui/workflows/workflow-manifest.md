@@ -52,6 +52,8 @@ No new custom-node package or model was installed by this change.
 | `02_episode_single_character.json` | `user/default/workflows/habitat-sol/02_episode_single_character.json` | `comfyui/workflows/02_episode_single_character.json` |
 | `03_episode_multi_character_inpaint.json` | `user/default/workflows/habitat-sol/03_episode_multi_character_inpaint.json` | `comfyui/workflows/03_episode_multi_character_inpaint.json` |
 | `04_repair_character_region.json` | `user/default/workflows/habitat-sol/04_repair_character_region.json` | `comfyui/workflows/04_repair_character_region.json` |
+| `06_transparent_wardrobe_asset_api.json` | API template; store alongside the workflow browser copy when installed | `comfyui/workflows/06_transparent_wardrobe_asset_api.json` |
+| `07_wardrobe_to_episode_api.json` | API template; store alongside the workflow browser copy when installed | `comfyui/workflows/07_wardrobe_to_episode_api.json` |
 
 ## Validation record
 
