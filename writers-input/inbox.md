@@ -26,3 +26,5 @@ Do not organize them. Do not finish them. An AI process can sort useful fragment
 - [TRUTH] Series start in the year 2187
 - [TRUTH] Habitat Sol was founded in 2094
 - [WORLD] The current year on Mars is calculated from the Settlement Year, abbreviated SY. 
+- [WORLD] Each habitat on Mars has their own patch, that are visible on working clothes etc. Some residents also wear them on private clothes. 
+- [CHARACTER] Lina Sato-Varga hates wearing clothes with the Sol patch on, and will often rip them off her clothes, leaving traces of the ripped of patch on her clothes. 
