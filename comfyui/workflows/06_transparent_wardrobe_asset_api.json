@@ -1,0 +1,125 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "cartoon, anime, illustration, painting, fashion editorial, glamour photography, mannequin, person, face, hands, body, duplicate garment, clothing rack, hanger, floor, wall, studio set, background object, readable text, letters, numbers, logo, watermark, signature, badge, decal, insignia, patch, extra pocket, extra sleeve, extra garment, armor, military uniform, glossy generic sci-fi, plastic fabric, deformed garment, cropped garment",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "ONE standalone Habitat Sol wardrobe garment asset only, no person: Mira Varga greenhouse duty outer layer, olive-green hip-length work jacket with rolled sleeves, plain reinforced cuffs, shallow utility pockets, subtle visible mending, realistic worn canvas and soft thermal lining, no marks or graphics. Front-on orthographic product-documentary view, complete garment fully visible with generous empty margin on every side, symmetrical neutral lay-flat silhouette, sleeves slightly separated from torso, isolated against one perfectly flat pure chroma-green #00FF00 background, no ground plane, no shadow, no gradient, no prop, no hanger. The green background is temporary and will be converted to transparency. Habitat Sol civilian workwear: repairable, practical, modest, never fashion styling, natural fabric weave, no readable text.",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1152,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 6601210031,
+      "control_after_generate": "increment",
+      "steps": 50,
+      "cfg": 4.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "ImageColorToMask",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ],
+      "color": 65280
+    }
+  },
+  "10": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "9",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "SaveImageWithAlpha",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "mask": [
+        "10",
+        0
+      ],
+      "filename_prefix": "HabitatSol/wardrobe/CHARACTER_SLUG/ASSET_SLUG_v1"
+    }
+  }
+}

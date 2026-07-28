@@ -1,109 +1,67 @@
 # Habitat Sol ComfyUI workflow system
 
-These are **ComfyUI UI workflow JSON files** for the Habitat Sol visual micro-series. They are version-controlled mirrors of the copies installed in ComfyUI's `workflows/habitat-sol/` browser folder.
+These version-controlled workflows support Habitat Sol's documentary visual-fiction production. **The active production stack is Qwen Image, not SDXL, Intorealism, IPAdapter, ControlNet, or Flux.**
+
+Read `../../art-direction/visual-bible.md`, the relevant character sheet under `../../characters/`, and any episode image brief before changing prompts or references.
+
+## Active Qwen stack
+
+| Use | Diffusion model | Text encoder | VAE | Baseline |
+|---|---|---|---|---|
+| Character, location, patch, and transparent garment generation | `qwen_image_2512_fp8_e4m3fn.safetensors` | `qwen_2.5_vl_7b_fp8_scaled.safetensors` with `type: qwen_image` | `qwen_image_vae.safetensors` | 1104×1472 (or 1152×1536 for full body), Euler/simple, 50 steps, CFG 4.0, denoise 1.0 |
+| Identity-preserving wardrobe-to-episode composition | `qwen_image_edit_fp8_e4m3fn.safetensors` | `qwen_2.5_vl_7b_fp8_scaled.safetensors` with `type: qwen_image` | `qwen_image_vae.safetensors` | 1152×1536, Euler/simple, 50 steps, CFG 4.0, denoise 1.0 |
+
+Do not substitute an older SDXL/Intorealism/IPAdapter graph into this family. Qwen-Image-Edit is the identity-preserving edit route; text-only Qwen Image is for new reference, location, patch, and garment assets.
 
 ## Visual contract
 
-Every workflow carries the project rules in its visible group descriptions and default prompts:
+Every workflow should preserve:
 
-- documentary, municipal-archive realism; intimate observation rather than heroic spectacle;
-- a maintained, repaired, lived-in civilian town—not glossy sci-fi, luxury colonization, or military space opera;
-- practical layered/repaired clothing, worn textiles, condensation, dust at thresholds, utility hardware, and abstract/unreadable labels;
-- restrained practical light rather than extreme orange-and-teal grading;
-- no generated readable text; faces and human situations outrank equipment;
-- children and teenagers are always age-appropriate and non-sexualized.
+- municipal-archive/documentary realism rather than fashion editorial polish;
+- a maintained, repaired, lived-in civilian town—not glossy sci-fi, luxury colonisation, or military space opera;
+- practical layered/repaired clothes, worn textiles, condensation, dust at thresholds, utility hardware, and no generated readable text;
+- subtle practical light and emotionally specific human situations;
+- age-appropriate, non-sexualised depiction of children and teenagers.
 
-Read `../../art-direction/visual-bible.md` and the named character sheet under `../../characters/` before replacing workflow prompt placeholders.
+## Current workflows
 
-## Workflows
-
-| File | Purpose | Normal starting point |
+| File | Role | Start here |
 |---|---|---|
-| `01_character_forge.json` | Build the approved canonical reference set for one recurring character. | Generate candidate batches, then select references deliberately. |
-| `02_episode_single_character.json` | Place one approved character into a new episode scene using reference-image identity conditioning. | Use one to three approved references and a new story frame. |
-| `03_episode_multi_character_inpaint.json` | Make a two-character scene in staged, separate identity-conditioned inpaint passes. | Start with an approved background/composition and non-overlapping masks. |
-| `04_repair_character_region.json` | Correct one region in an approved image without regenerating the rest. | Load the approved source and paint only the failed region. |
-| `05_habitat_patch_forge.json` | Generate text-free square embroidered patch references for the Martian habitats. | Generate Habitat Sol candidates first; then change only the habitat clause to Meridian and later habitats. |
+| `01_character_forge.json` | UI workflow for a character's five canonical Qwen Image 2512 views. | Edit the identity prompt and preserve the 50-step / CFG 4.0 baseline. Approve portrait, three-quarter, profile, full body, and expression separately. |
+| `05_habitat_patch_forge.json` | UI workflow for text-free, standalone habitat patch reference assets. | Generate the patch as a separate asset first; do not ask a character workflow to invent a canonical patch. |
+| `06_transparent_wardrobe_asset_api.json` | API workflow for one transparent PNG garment asset. | Combine a character's `identity_guard`, wardrobe prompt, and the shared asset suffix from `../wardrobes/wardrobe-prompt-manifest.json`. |
+| `07_wardrobe_to_episode_api.json` | API workflow for an episode image using person + garment + scene references. | Give inputs in fixed order: canonical person, approved transparent garment, scene/location reference. |
+| `habitat_sol_patch_forge_api.json` | API-format counterpart for Qwen patch generation. | Use for scripted/API patch batches. |
 
-## Open and save
+`06` uses a temporary exact chroma-green background, `ImageColorToMask`, `InvertMask`, and `SaveImageWithAlpha` to produce a transparent RGBA garment PNG. The source garment must be checked for a real alpha channel, no green fringe, one complete silhouette, and no invented text/logos/patches before it becomes canonical.
 
-1. In ComfyUI, refresh the workflow browser and open **`workflows/habitat-sol/`**.
-2. Open the desired JSON. The coloured groups are intentionally numbered in production order.
-3. Use the image widgets to upload/select references, base images, pose/depth maps, and masks. ComfyUI stores uploaded inputs in its input directory.
-4. Change the `SaveImage` prefix before queuing. Never use the source image prefix for a repair.
-5. Record the selected image's final prompt, reference names, seed, checkpoint, adapter strength, resolution, and output path in the episode's `## Production notes`.
+`07` is a **semantic composition** workflow, not a flat overlay. Its Qwen-Image-Edit prompt assigns fixed roles to the batched images:
 
-## Canonical character references
+1. image 1 — canonical person identity;
+2. image 2 — transparent wardrobe asset;
+3. image 3 — scene/location reference.
 
-Run `01_character_forge.json` for a single character and approve, at minimum:
+It should preserve identity from image 1, garment silhouette/material/colour from image 2, and location/composition from image 3. Keep those assets separately versioned so an episode image never becomes the only source of truth for a person or garment.
 
-1. front or near-front portrait;
-2. three-quarter portrait;
-3. full-body image;
-4. neutral environmental image;
-5. expression variation;
-6. canonical outfit variation.
+## Legacy files
 
-Save the selected images under the project's durable character-reference location, using clear names such as `characters/amara-okonkwo/reference-front.png`. Do not make a generated image canonical merely because it is attractive: compare it against the relevant character sheet first.
+`habitat_sol_all_core_characters_api.json` and `habitat_sol_core_character_prompts.json` preserve an earlier Flux/LoRA character-prompt experiment. They are **not part of the active Qwen production path** and must not be used as the model/settings authority for new references or episodes.
 
-## Episode workflow: what to change
+## Running and selecting
 
-### Keep stable unless testing deliberately
+1. In ComfyUI, open `workflows/habitat-sol/` and choose the relevant UI workflow, or run the API-format JSON through the ComfyUI API.
+2. Use the Qwen baseline above for a production candidate. Small 4-step, 512×768 runs are execution smoke tests only—not art-selection candidates.
+3. Review in this order: identity/age, subject count, garment accuracy, action/framing, Habitat Sol material evidence, then light/tone.
+4. Reject drift rather than rationalising it: wrong age, extra/missing person, unreadable generated text, invented competing marks, glamour, generic space set, or a non-transparent garment background.
+5. Save selected identity and garment assets to tracked character paths; keep transient candidates in ignored output paths.
 
-- **Checkpoint:** `N/intorealismUltra_v40.safetensors`
-- **Identity adapter:** installed `ip-adapter-plus-face_sdxl_vit-h.safetensors`
-- **CLIP Vision:** installed `CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors`
-- **Sampling baseline:** 896 × 1152, DPM++ 2M SDE, Karras, 30 steps, CFG 4.5
-- **IPAdapter reference strength:** start at 0.78; test roughly 0.65–0.85 before changing prompt wording
+## Reproducibility record
 
-### Change per episode
+For every selected asset or episode image, capture:
 
-- approved reference image(s), canonical identity anchors, and character-specific negative safeguards;
-- one precise episode action/emotion; location/material details; camera/composition; practical light;
-- seed and resolution when composition needs a different format;
-- save prefix, e.g. `habitat-sol/episodes/0042`.
-
-The episode workflow batches up to three approved images and averages their identity signal. This preserves the person while permitting a different pose, framing, clothing, location, and camera. It is not basic img2img.
-
-### Pose and depth
-
-`02_episode_single_character.json` has a Union SDXL ControlNet branch. Supply a **preprocessed** pose or depth map to its image input and set the node's control mode/strength for the map you supplied; disconnect that branch when not using composition guidance. No OpenPose/DWPose preprocessor was installed at validation time, so the workflow deliberately does not pretend to preprocess a raw photograph.
-
-## Multi-character masks
-
-`03_episode_multi_character_inpaint.json` avoids prompt-only group identity blending:
-
-1. Load a base scene/background.
-2. Paint/select **mask A**: white where Character A may change, black elsewhere.
-3. Use Character A's reference, identity/action prompt, strength, and the conservative inpaint pass.
-4. The decoded A result becomes the input for Character B.
-5. Paint/select **mask B**; keep it separate from A where possible.
-6. Use Character B's separate reference, prompt, and strength.
-7. Inspect both faces/hands and use final repair only when it helps.
-
-Defaults use expanded, feathered masks, noise masks, and 0.55 inpaint denoise. Start around 0.45 for a small correction, 0.55 for a normal replacement, and 0.65 only when the failed region needs a larger change.
-
-## Region repair
-
-`04_repair_character_region.json` is for face drift, hair/age mismatch, clothing inconsistency, bad hands, expression, accessories, or a signature detail. It preserves the rest of the approved image through a mask-constrained `InpaintModelConditioning` pass. Use a generous but not scene-wide mask, feather it, and save to `.../repaired`; it never overwrites a source.
-
-## Later: character LoRAs
-
-Reference conditioning is the initial system and should remain the baseline until a character has enough approved, varied references and recurring production reveals a measurable identity problem. Consider a character LoRA only when:
-
-- the character recurs frequently;
-- their approved reference set is stable and canon-reviewed;
-- IPAdapter Plus repeatedly fails under the required poses/outfits/camera distances;
-- training images and consent/provenance are documented; and
-- the LoRA is tested against this baseline rather than silently replacing it.
-
-The workflows use `CheckpointLoaderSimple`, so a later compatible `LoraLoader` can be placed between it and the generation/identity nodes without redesigning the workflow family.
-
-## Reproducibility checklist
-
-- exact workflow filename and graph revision;
-- checkpoint, adapter, clip-vision model, ControlNet if used, and upscaler if used;
-- character reference filenames and identity strength;
-- prompt and negative prompt, unabridged;
-- seed, resolution, sampler, scheduler, steps, CFG, denoise, and ControlNet strength;
+- workflow filename and graph revision;
+- exact Qwen model, text encoder, and VAE filenames;
+- source person, garment, and scene-reference paths where applicable;
+- complete positive and negative prompts;
+- seed, resolution, sampler, scheduler, steps, CFG, and denoise;
 - selected output path and publication status.
