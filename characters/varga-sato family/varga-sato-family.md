@@ -62,7 +62,7 @@ With Kenji she shares a repair-person's marriage: love expressed as pre-packed t
 
 ### Kenji Sato
 
-<img src="kenji%20sato/expression_qwen_00001_%20(2).png" alt="Kenji Sato, expression portrait" width="320">
+<img src="kenji%20sato/character-data-sheet.png" alt="Kenji Sato character data sheet" width="640">
 
 | Field | Detail |
 |---|---|
@@ -95,7 +95,7 @@ His private longing is Earth. Not the ideological Earth in Safi's drawings or th
 
 ### Lina Sato-Varga
 
-<img src="lina%20sato-varga/front_qwen_00001_%20(2).png" alt="Lina Sato-Varga, front portrait" width="320">
+<img src="lina%20sato-varga/character-data-sheet.png" alt="Lina Sato-Varga character data sheet" width="640">
 
 | Field | Detail |
 |---|---|
@@ -128,7 +128,7 @@ She is not shallow. She is furious that adults mistake ambition for betrayal. Wi
 
 ### Tomas Sato-Varga
 
-<img src="tomas%20sato-varga/front_qwen_v2_00001_%20(1).png" alt="Tomas Sato-Varga, front portrait" width="320">
+<img src="tomas%20sato-varga/character-data-sheet.png" alt="Tomas Sato-Varga character data sheet" width="640">
 
 | Field | Detail |
 |---|---|

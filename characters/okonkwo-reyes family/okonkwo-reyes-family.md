@@ -28,19 +28,7 @@ Shared family palette:
 
 ### Amara Okonkwo
 
-<p>
-  <img src="amara%20okonkwo/front_portrait_00001_.png" alt="Amara Okonkwo, front portrait, variant 1" width="220">
-  <img src="amara%20okonkwo/front_portrait_00002_.png" alt="Amara Okonkwo, front portrait, variant 2" width="220">
-  <img src="amara%20okonkwo/three_quarter_00001_.png" alt="Amara Okonkwo, three-quarter portrait, variant 1" width="220">
-  <img src="amara%20okonkwo/three_quarter_00002_.png" alt="Amara Okonkwo, three-quarter portrait, variant 2" width="220">
-  <img src="amara%20okonkwo/side_profile_00001_.png" alt="Amara Okonkwo, side profile, variant 1" width="220">
-  <img src="amara%20okonkwo/side_profile_00002_.png" alt="Amara Okonkwo, side profile, variant 2" width="220">
-  <img src="amara%20okonkwo/expression_00001_.png" alt="Amara Okonkwo, expression study, variant 1" width="220">
-  <img src="amara%20okonkwo/expression_00002_.png" alt="Amara Okonkwo, expression study, variant 2" width="220">
-  <img src="amara%20okonkwo/expression_00002_%20(1).png" alt="Amara Okonkwo, expression study, variant 3" width="220">
-  <img src="amara%20okonkwo/full_body_00001_.png" alt="Amara Okonkwo, full-body portrait, variant 1" width="220">
-  <img src="amara%20okonkwo/full_body_00002_.png" alt="Amara Okonkwo, full-body portrait, variant 2" width="220">
-</p>
+<img src="amara%20okonkwo/character-data-sheet.png" alt="Amara Okonkwo character data sheet" width="640">
 
 | Field | Detail |
 |---|---|
@@ -111,7 +99,7 @@ Elena's relationship with Nico is careful: she refuses to turn his past into a d
 
 ### Nico Okonkwo-Reyes
 
-<img src="nico%20okonkwo-reyes/front_qwen_00001_.png" alt="Nico Okonkwo-Reyes, front portrait" width="320">
+<img src="nico%20okonkwo-reyes/character-data-sheet.png" alt="Nico Okonkwo-Reyes character data sheet" width="640">
 
 | Field | Detail |
 |---|---|
@@ -143,7 +131,7 @@ Amara and Elena try not to overprotect him. He interprets that restraint as resp
 
 ### Safi Okonkwo-Reyes
 
-<img src="safi%20okonkwo-reyes/front_qwen_v2_00001_.png" alt="Safi Okonkwo-Reyes, front portrait" width="320">
+<img src="safi%20okonkwo-reyes/character-data-sheet.png" alt="Safi Okonkwo-Reyes character data sheet" width="640">
 
 | Field | Detail |
 |---|---|
