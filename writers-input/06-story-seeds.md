@@ -10,19 +10,19 @@ A seed does not need an outline or ending.
 
 **Situation**
 
--
+- 
 
 **Emotion**
 
--
+- 
 
 **Character**
 
--
+- 
 
 **Question or tension**
 
--
+- 
 
 **No required ending**
 
@@ -50,22 +50,24 @@ Elena realizes Safi has never heard uncontrolled water.
 
 ---
 
-## The birthday queue
+## The girl next door
 
 **Situation**
 
-Someone continues receiving birthday messages from a dead relative because an archive automation is still running.
+Nico suddenly sees his neigbour Lina in new light, from being the older close friend she has always been, to something more.
 
 **Emotion**
 
-Grief complicated by the tenderness and intrusion of an ordinary system doing exactly what it was told.
+Love, fear, curious
 
 **Character**
 
-Open.
+Nico and Lina.
 
 **Question or tension**
 
-Who is responsible for stopping a message that has become part of a person's mourning?
+Can you be in love with a two year old older girl. Does she feel the same way? Will he destroy their relationship?
 
 **No required ending**
+
+---
