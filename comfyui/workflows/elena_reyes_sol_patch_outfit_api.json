@@ -1,0 +1,111 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "full-body_00001_.png"
+    }
+  },
+  "5": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "4",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Elena Reyes, same 41-year-old Latina or Afro-Latina doctor from the reference image, dark hair with distinct silver streaks tied back, warm brown skin, precise intelligent gaze and restrained kind expression; full-body standing portrait, realistic adult proportions, hands visible. She wears practical Habitat Sol civilian clinic workwear: clean cream clinical overshirt, charcoal thermal vest, dark practical trousers, worn boots, and a plain Mars-red scarf. Exactly one embroidered patch in the entire image: one small square Habitat Sol patch sewn only on the viewer-right chest of the charcoal vest, no patch anywhere else. The patch is a flat iconographic moss-green greenhouse arch, one tiny three-leaf sprout and warm amber sun-disc, with oxidized Mars red outer frame #9A3E2F, basalt navy ring #162B3A and dust cream stitch edge #D6C6A6; it has no letters, words, symbols, logos, or pseudo-writing. Both sleeves, all lower corners, overshirt and trousers are plain and unmarked: no badges, no labels, no appliques, no cross-shaped patch, no diagonal repair seam. Compact worn Sol clinic with old clean equipment, soft practical indoor light, municipal documentary realism, no glamour, no glossy futuristic hospital, no readable text.",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "man, male, masculine face, beard, moustache, young woman, teenager, child, glamour fashion, revealing clothing, sexualized, readable text, letters, typography, numbers, words, logo, watermark, signature, pseudo-writing, name tag, medical badge, sleeve patch, arm patch, shoulder patch, second patch, extra patch, cross-shaped patch, lower-right patch, diagonal repair seam, deformed hands, extra fingers, duplicate person, extra people, glossy hospital futurism, anime, cartoon, blurry.",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 218700512,
+      "steps": 35,
+      "cfg": 4.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.52,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "habitat-sol/characters/elena-reyes/sol-patch-outfit-clean",
+      "images": [
+        "9",
+        0
+      ]
+    }
+  }
+}
