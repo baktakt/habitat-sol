@@ -5,11 +5,11 @@
 | Field | Canon value |
 |---|---|
 | Main story year | **2187 CE** |
-| Opening entry | **Sol 7284** |
-| Opening episode | *The Tomatoes Failed During Breakfast* |
+| Opening entry | **Sol 7283** |
+| Opening episode | *A New Day Dawns* |
 | Story location | Habitat Sol, Mars |
 
-Habitat Sol’s daily archive begins in **2187 CE**. The first published episode is recorded as **Sol 7284**.
+Habitat Sol’s daily archive begins in **2187 CE**. The first published episode is recorded as **Sol 7283**.
 
 ## Why this era works
 
