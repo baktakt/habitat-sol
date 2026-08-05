@@ -2,6 +2,10 @@
 
 Episodes are daily art-fiction entries.
 
+## Public-story length
+
+The public story is an Instagram-scale glimpse, normally **120–220 words**. Capture one scene, sensory detail, or small exchange; preserve conversation where it earns its place, but let implication do more work than explanation. Image briefs and production notes do not count toward this target.
+
 ## Episode file template
 
 ```markdown

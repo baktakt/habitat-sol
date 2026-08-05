@@ -46,3 +46,19 @@ Focus on what felt true, false, distinctive, generic, too explained, or emotiona
 **General rule extracted**
 
 Infrastructure should usually be experienced as inconvenience, work, ritual, or dependency rather than explained as technology.
+
+---
+
+## 2026-08-05 — Episode scale
+
+**Worked**
+
+- Brief conversation makes the household feel inhabited.
+
+**Did not work**
+
+- Episode text was too long for an Instagram post and tried to carry too much of the family's wider story at once.
+
+**General rule extracted**
+
+Write Instagram-scale glimpses: one charged moment, economical dialogue, and a resonant image or feeling that lets the larger life stay off-page.

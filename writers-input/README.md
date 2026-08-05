@@ -120,6 +120,19 @@ python3 scripts/collect_inbox_items.py --repo . --mark-processed \
 
 ## AI writing rule
 
+## Episode scale: glimpses, not full short stories
+
+Habitat Sol entries are written for an Instagram post. They should feel like a **glimpse**: one charged moment, one small exchange, one image that lingers, and some room for the reader to infer the larger life around it.
+
+- Aim for **120–220 words of story prose**; go beyond that only when the creator explicitly asks for a longer piece.
+- Center one immediate action, observation, or turn. Do not try to establish every character, the town's entire pressure, or a complete plot in one entry.
+- Keep dialogue when it reveals a relationship, but use only the lines the moment needs.
+- Let an object, gesture, interruption, or withheld response imply the wider story instead of explaining it.
+- End on an image, a changed look, or an unanswered feeling—not a summary, moral, or explanatory paragraph.
+- The image brief and production record are not part of the public story-word target.
+
+Across multiple entries, small glimpses should accumulate into a larger life.
+
 The AI should not ask the creator to define every missing detail.
 
 When information is missing:
