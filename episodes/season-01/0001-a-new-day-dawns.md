@@ -20,31 +20,15 @@ collectible: true
 
 # A New Day Dawns
 
-Before dawn, the dust beyond Mira’s kitchen window was only darkness. Then it loosened into rust.
+Sunrises on Mars are truly something else, she thought to herself. The sunlight slowly turning the compact darkness into that rusty red tint, that she had learned to love so much. She had only fragments of memories of sunrises on Earth, but she doubted anything could beat this. The extreme conditions outside the habitat only made the tea taste even better, the room feel safer, and her feeling calmer. 
 
-On the counter, Kenji’s tool pouch sat open beside her tea. A brass washer gleamed in one pocket.
+Lina and Tomas were still asleep in their pods, but she could hear Kenji getting ready in the bathroom. The major failure of three of the dust harvesting rovers had made him work both late nights and early mornings the past week. "I think we'll be done with the last one tonight, honey. So maybe we can have dinner together the whole family tomorrow, he said". "Sounds great, let's do that", she answered, knowing that the probability of something else coming up that needed his urgent attention was high. Always high.
 
-“Tomas rescued it,” Mira said.
+She was looking forward to today. The past weeks nutrition readings from the new modified plants were looking really good, and maybe finally they had found the right combination that would calm the agronomist board, at least to some extent. We are making good progress, she had repeatedly responded in the past meetings. She was convinced that she and her team was on to something.
 
-Kenji, already in orange work trousers, examined the washer. “From what?”
+A new day dawns for the people of Habitat Sol, the first human habitat on this hostile, cold and bleak planet they call home.
 
-“Loneliness.”
-
-He considered that with the seriousness he gave faulty seals. “Then it had an important night.”
-
-The bathroom fan clicked off. Behind Lina’s closed pod door, a message tone sounded and was quickly silenced.
-
-Kenji zipped the pouch. “Last rover tonight. I think.”
-
-“And tomorrow?”
-
-“Dinner. Actual noodles. No packet.”
-
-Mira lifted her mug. “No reservations.”
-
-At the greenhouse, condensation blurred the morning against the panels. Mira opened the newest nutrition readings. The numbers were small, stubborn, and—this time—better.
-
-Her tablet lit her hand green. Outside, the sun found the dust field. Inside, the young leaves held still.
+A good day, Mira decided, and stepped into the greenhouse complex.
 
 ## Image brief
 
