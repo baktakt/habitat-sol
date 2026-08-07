@@ -25,8 +25,6 @@
 | Qwen Image baseline | 1104×1472 (or 1152×1536 full body), Euler/simple, 50 steps, CFG 4.0, denoise 1.0 | Production candidate settings for Qwen Image 2512. |
 | Qwen Image Edit baseline | 1152×1536, Euler/simple, 50 steps, CFG 4.0, denoise 1.0 | Production candidate settings for the identity-preserving edit path. |
 
-The active Habitat Sol workflow family does **not** use `N/intorealismUltra_v40.safetensors`, SDXL, IPAdapter, CLIP Vision, Union ControlNet, or a 4× upscaler. Those belonged to a superseded workflow design and must not be treated as a production dependency.
-
 ## Registered node classes used by active graphs
 
 - Qwen generation: `UNETLoader`, `CLIPLoader`, `VAELoader`, `CLIPTextEncode`, `EmptyLatentImage`, `KSampler`, `VAEDecode`, `SaveImage`.
