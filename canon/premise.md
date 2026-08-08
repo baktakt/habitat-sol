@@ -1,6 +1,6 @@
 # Premise
 
-**Habitat Sol** is a daily visual fiction archive from the first town on Mars.
+**Habitat Sol** is a weekly visual fiction archive from the first town on Mars.
 
 The story follows two neighboring families living in the oldest permanent civilian settlement on the planet. Around them, Mars has grown into a network of cities, transport hubs, industrial centers, research towns, agricultural zones, and wealthy metropolises. But Sol remains the first: historic, stubborn, intimate, and increasingly fragile.
 
@@ -30,7 +30,7 @@ Their lives overlap through shared corridors, school schedules, airlock alarms, 
 - ecological fragility,
 - the romance and burden of being first.
 
-## Daily entry format
+## Weekly episode format
 
 A typical public entry contains:
 

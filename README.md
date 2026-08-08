@@ -2,7 +2,7 @@
 
 **Before Mars had cities, it had a town.**
 
-Habitat Sol is a daily visual fiction and music archive set in the first permanent civilian settlement on Mars.
+Habitat Sol is a weekly visual fiction and music archive set in the first permanent civilian settlement on Mars.
 
 Each entry pairs a generated image and an original music cue with a short story: a glimpse into ordinary life inside an extraordinary place. The project follows two neighboring families as they work, love, grieve, argue, raise children, grow food, repair machines, and try to remain human in a world that was never built for them.
 
@@ -16,7 +16,7 @@ Sol is intimate, mature, civic-minded, proud, and increasingly unsure of its pla
 
 ## Project format
 
-The public work is intended as a daily gallery/fiction/music rhythm:
+The public work is intended as a weekly gallery/fiction/music rhythm:
 
 - one image,
 - one short story,
@@ -30,7 +30,7 @@ The public work is intended as a daily gallery/fiction/music rhythm:
 ```text
 canon/          Core worldbuilding facts: history, settlements, society, technology.
 characters/         Character sheets and family structures.
-episodes/           Daily episode drafts.
+episodes/           Weekly episode drafts.
 art-direction/      Visual language, references, and style rules.
 music/              Episode-music direction, prompts, and provenance.
 research/           Science-backed Mars, space exploration, and habitat-living knowledge base.

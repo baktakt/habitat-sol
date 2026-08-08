@@ -9,7 +9,7 @@
 | Opening episode | *A New Day Dawns* |
 | Story location | Habitat Sol, Mars |
 
-Habitat Sol’s daily archive begins in **2187 CE**. The first published episode is recorded as **Sol 7283**.
+Habitat Sol’s weekly archive begins in **2187 CE**. The first published episode is recorded as **Sol 7283**.
 
 ## Why this era works
 

@@ -1,6 +1,6 @@
 # Episodes
 
-Episodes are daily art-fiction-and-music entries.
+Episodes are weekly art-fiction-and-music entries.
 
 ## Public-story length
 
