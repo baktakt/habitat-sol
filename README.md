@@ -8,6 +8,8 @@ Each entry pairs a generated image and an original music cue with a short story:
 
 This repository is the open world bible for the Habitat Sol universe. Canon, characters, settlements, visual direction, music direction, episode drafts, research, and story-development notes evolve here.
 
+Follow the weekly archive on [Instagram](https://www.instagram.com/habitat_sol?igsh=MWNvejFtMmtyYWM1Yw%3D%3D&utm_source=qr).
+
 ## Core setting
 
 The story begins in **Habitat Sol**, the oldest Martian settlement: population roughly **2,000**. Once humanity's first permanent civilian habitat, it is now a historic town in a wider Martian civilization of capitals, industrial cities, research settlements, agricultural zones, and wealthy metropolises.
