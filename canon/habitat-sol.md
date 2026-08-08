@@ -44,6 +44,8 @@ The habitat should feel lived-in rather than sleek, but it is not dilapidated. S
 - memorial plaques,
 - limited red dust at exterior thresholds.
 
+Mars’s smaller radius makes the horizon feel nearer than Earth’s. Exterior views and imagery should use that close, curved horizon as a quiet compositional fact: wide terrain can still feel enclosed, with the settlement, its perimeter, and distant activity held in the same human scale.
+
 Age is expressed through design history, softened finishes, and continuity of use—not heavy rust, grime, cracks, broken fixtures, or a settlement that appears to be falling apart.
 
 ## Tone
