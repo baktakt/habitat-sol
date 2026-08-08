@@ -43,8 +43,25 @@ Mira Varga standing alone among condensation-covered tomato vines in Greenhouse 
 
 ## Production notes
 
+### Image
+
 - Workflow: TBD
 - Model: TBD
 - Seed: TBD
 - Prompt: TBD
 - Final image: TBD
+
+### Music
+
+- Workflow: ACE-Step 1.5 text2music
+- Model/checkpoint: TBD
+- Caption: TBD
+- Lyrics / structure: TBD
+- Duration: TBD
+- BPM / key / time signature: TBD
+- Seed: TBD
+- Inference settings: TBD
+- Source output: TBD
+- Final master: TBD
+- Delivery file: TBD
+- Selection/mastering notes: TBD

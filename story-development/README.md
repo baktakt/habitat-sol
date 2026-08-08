@@ -93,31 +93,6 @@ Fragments are welcome. Polished writing is not required.
 
 The AI is responsible for organizing useful fragments, proposing consequences, identifying contradictions, and turning selected material into stories.
 
-## Inbox curation automation
-
-`inbox.md` is intentionally unstructured creator input. The daily canon-curation agent uses `../scripts/collect_inbox_items.py` and the tracked `.inbox-state.json` ledger to process only notes it has not handled before.
-
-- The collector normalizes and fingerprints each non-empty bullet under `## Notes`.
-- A recorded fingerprint is not reconsidered on later runs; a materially edited note has a new fingerprint and is eligible again.
-- Each recorded entry preserves its disposition, destination, timestamp, and rationale, including `needs-creator` and `duplicate/no-change` outcomes.
-- Do not delete the state file to force reprocessing. Revise/resubmit the note, or make an explicit reviewed state change instead.
-
-Run the pending-only collector locally:
-
-```bash
-python3 scripts/collect_inbox_items.py --repo .
-```
-
-The curator records a final disposition only after it finishes any content edits:
-
-```bash
-python3 scripts/collect_inbox_items.py --repo . --mark-processed \
-  --fingerprint <fingerprint> \
-  --disposition story-seed \
-  --destination writers-input/06-story-seeds.md \
-  --rationale "Converted the creator's situation into a seed."
-```
-
 ## AI writing rule
 
 ## Episode scale: glimpses, not full short stories

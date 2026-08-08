@@ -2,13 +2,7 @@
 .DS_Store
 .idea/
 .vscode/
-scripts/__pycache__/
 
 # Generated assets / heavy files
 outputs/
 *.tmp
-
-# Local ComfyUI exports that may be large
-comfyui/workflows/*.json
-comfyui/character-sheets/*.png
-comfyui/location-sheets/*.png

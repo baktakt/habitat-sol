@@ -57,9 +57,40 @@ Mira Varga, a 42-year-old agronomist with dark curly hair tied back and a patche
 
 ## Production notes
 
+### Image
+
 - Workflow: TBD
 - Model: TBD
 - Seed: TBD
 - Prompt: TBD
 - Negative prompt: TBD
 - Final image: TBD
+
+### Music
+
+- Workflow: ACE-Step 1.5 text2music
+- Model/checkpoint: ACE-Step 1.5 (exact checkpoint TBD)
+- Caption: |
+    cinematic sci-fi ambient, deep pulsing synths, warm evolving strings, sparse piano, organ-like textures, intimate, atmospheric, melancholic, hopeful, spacious, restrained, futuristic
+- Lyrics / structure: |
+    [Intro - Sparse, atmospheric]
+
+    [Theme - Gentle piano and warm synths]
+
+    [Development - Pulsing, slowly expanding]
+
+    [Interlude - Quiet, reflective]
+
+    [Build - Strings rising, increasing intensity]
+
+    [Climax - Full, emotional, expansive]
+
+    [Outro - Fading, spacious, unresolved]
+- Duration: TBD
+- BPM / key / time signature: TBD
+- Seed: TBD
+- Inference settings: TBD
+- Source output: TBD
+- Final master: TBD
+- Delivery file: TBD
+- Selection/mastering notes: TBD

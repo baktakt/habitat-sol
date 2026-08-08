@@ -2,9 +2,24 @@
 
 ## Core visual direction
 
-Documentary realism, soft cinematic light, lived-in habitat interiors, practical engineering detail, worn textiles, condensation, dust, hand-labeled equipment, and quiet human moments.
+Documentary realism, soft cinematic light, lived-in habitat interiors, practical engineering detail, clean functional surfaces, restrained signs of ordinary use, and quiet human moments.
 
-Avoid glossy generic sci-fi. Habitat Sol should look maintained, repaired, loved, and aging.
+Avoid glossy generic sci-fi. Habitat Sol should look established, loved, carefully maintained, and gently aged.
+
+## Condition and age
+
+Habitat Sol is old infrastructure, not failing infrastructure. Its residents depend on these spaces and maintain them professionally. The default visual condition is safe, clean, intact, and operational.
+
+Show age through:
+
+- slightly dated modular geometry and components from different installation periods,
+- matte surfaces, softened edges, and a few minor scuffs in high-use areas,
+- orderly utility fittings, intact seals, clean pressure windows, and well-kept equipment,
+- restrained condensation near greenhouse glass or window edges,
+- small, specific repairs only where they make functional or story sense,
+- limited dust at exterior thresholds rather than grime across every interior.
+
+Do not use heavy rust, corrosion, cracked panels, broken seals, peeling surfaces, widespread patchwork, dirty windows, debris, or improvised survivalist repairs as generic scene texture. Habitat Sol is neither pristine luxury nor a post-apocalyptic ruin. When a prompt needs history, prefer maintained continuity over visible damage.
 
 ## Influences
 
@@ -17,7 +32,7 @@ Avoid glossy generic sci-fi. Habitat Sol should look maintained, repaired, loved
 
 ## Lighting
 
-- greenhouse: warm plant light, condensation glow, red exterior contrast,
+- greenhouse: warm plant light, restrained condensation glow, clean operational glass, red exterior contrast,
 - residential: soft low practical lighting, screen glow, warm domestic pools,
 - civic spaces: layered institutional light mixed with improvised decorations,
 - exterior: harsh sunlight, red dust, black sky, small human figures,

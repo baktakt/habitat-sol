@@ -1,10 +1,10 @@
 # Episodes
 
-Episodes are daily art-fiction entries.
+Episodes are daily art-fiction-and-music entries.
 
 ## Public-story length
 
-The public story is an Instagram-scale glimpse, normally **120–220 words**. Capture one scene, sensory detail, or small exchange; preserve conversation where it earns its place, but let implication do more work than explanation. Image briefs and production notes do not count toward this target.
+The public story is an Instagram-scale glimpse, normally **120–220 words**. Capture one scene, sensory detail, or small exchange; preserve conversation where it earns its place, but let implication do more work than explanation. Image briefs and production notes do not count toward this target. See [`music/README.md`](../music/README.md) for the episode-music workflow and provenance requirements.
 
 ## Episode file template
 
@@ -42,10 +42,29 @@ collectible: true
 
 ## Production notes
 
+### Image
+
 - Image workflow:
 - Model:
 - Seed:
 - Prompt:
 - Negative prompt:
 - Final image:
+
+### Music
+
+- Workflow: ACE-Step 1.5 text2music
+- Model/checkpoint:
+- Caption: |
+    [Exact caption]
+- Lyrics / structure: |
+    [Exact instrumental structure prompt]
+- Duration:
+- BPM / key / time signature:
+- Seed:
+- Inference settings:
+- Source output:
+- Final master:
+- Delivery file:
+- Selection/mastering notes:
 ```

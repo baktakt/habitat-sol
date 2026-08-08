@@ -13,7 +13,7 @@ Habitat Sol is the first permanent civilian settlement on Mars and the emotional
 | Population | approximately 2,000 |
 | Story present | 2187 CE |
 | Identity | oldest civilian town on Mars |
-| Character | intimate, historic, worn, civic-minded, stubborn |
+| Character | intimate, historic, mature, civic-minded, stubborn |
 | Narrative function | pressure cooker, memory palace, small town, origin myth |
 
 ## Historical role
@@ -30,19 +30,21 @@ People from other cities may see Sol as quaint, obsolete, sentimental, or histor
 
 ## Built environment
 
-The habitat should feel lived-in rather than sleek:
+The habitat should feel lived-in rather than sleek, but it is not dilapidated. Sol's survival depends on disciplined upkeep: pressure boundaries, seals, windows, life-support hardware, kitchens, clinics, and public spaces are clean, intact, and professionally maintained.
 
-- patched panels,
-- hand-labeled equipment,
-- old warning stickers,
-- condensation on greenhouse glass,
-- family repairs beside municipal repairs,
+- modular components from different construction periods,
+- intact panels with occasional specific, documented repairs rather than widespread patchwork,
+- orderly equipment labels and old warning stickers,
+- restrained condensation on operational greenhouse glass,
+- family modifications beside municipal maintenance,
 - narrow residential corridors,
 - communal dining areas,
 - soft fabric baffles to control sound,
 - old civic murals,
 - memorial plaques,
-- dust at every threshold.
+- limited red dust at exterior thresholds.
+
+Age is expressed through design history, softened finishes, and continuity of use—not heavy rust, grime, cracks, broken fixtures, or a settlement that appears to be falling apart.
 
 ## Tone
 
