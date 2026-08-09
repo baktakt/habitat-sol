@@ -107,7 +107,7 @@ His private longing is Earth. Not the ideological Earth in Safi's drawings or th
 | Conflict | loves her family but resents inherited small-town mythology |
 | Core contradiction | wants to be seen as exceptional without being turned into a symbol of leaving |
 
-Lina has grown up surrounded by adults who call Sol historic when they mean limited. She loves her parents, knows the smell of greenhouse corridors, can identify rover faults by the tension in Kenji's shoulders, and still wants a bigger life than the town seems willing to offer.
+Lina has grown up surrounded by adults who call Sol historic when they mean limited. She loves her parents, knows the smell of greenhouse corridors, can identify rover faults by the tension in Kenji's shoulders, and still wants a bigger life than the town seems willing to offer. She hates wearing the Sol patch and often tears it from her clothes, leaving the outline and loose threads behind.
 
 Her imagination is fed by metropolitan media streams from Astra, Meridian, and Elysium: cleaner clothes, wider corridors, competitive schools, art scenes, bodies moving through public space without everyone knowing their parents. She adapts those styles using what Sol can provide: customized jacket cuffs, a repurposed strap, a bright lining, a small unauthorized sticker on a school tablet. Her rebellion is visual before it is political.
 

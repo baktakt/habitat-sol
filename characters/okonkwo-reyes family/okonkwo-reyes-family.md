@@ -113,7 +113,7 @@ Elena's relationship with Nico is careful: she refuses to turn his past into a d
 
 Nico arrived in Sol after an evacuation from a smaller mining settlement. The official records are partial, delayed, or sealed; whether this is bureaucracy, trauma protection, or something more political remains an open question. Nico remembers enough to distrust clean stories. He has learned how adults change tone when they reach the part they do not want to explain.
 
-He is observant in the way of children who have had to map exits. He notices which doors are locked, which vents sound wrong, which adults are lying out of kindness. He is good with old habitat diagrams and drawn to infrastructure that has been declared off-limits. With Lina he shares a hunger for elsewhere, though Nico's elsewhere is less glamorous: sealed service tunnels, forgotten pressure zones, places where the town's real history might be stored.
+He is observant in the way of children who have had to map exits. He notices which doors are locked, which vents sound wrong, which adults are lying out of kindness. He is good with old habitat diagrams and drawn to infrastructure that has been declared off-limits. With Lina, two years older and one of his closest friends, he shares a hunger for elsewhere; she has watched out for him since they were small. Nico is secretly in love with her, though his elsewhere is less glamorous: sealed service tunnels, forgotten pressure zones, places where the town's real history might be stored.
 
 Amara and Elena try not to overprotect him. He interprets that restraint as respect on good days and abandonment on bad ones.
 

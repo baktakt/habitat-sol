@@ -26,6 +26,10 @@ Over time, these designations became real place names. In daily speech, resident
 - **Astra** values knowledge, youth, science, argument, and ambition.
 - **Arcadia** values self-sufficiency, water, food, ecology, and long-term survival.
 
+## Habitat patches
+
+Each Martian habitat has its own patch. Patches identify workwear and equipment; some residents also choose to wear their habitat patch on private clothes.
+
 ## Everyday speech examples
 
 - "She moved to Meridian."

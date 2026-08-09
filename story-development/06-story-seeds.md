@@ -50,6 +50,28 @@ Elena realizes Safi has never heard uncontrolled water.
 
 ---
 
+## The birthday archive
+
+**Situation**
+
+Someone continues receiving birthday messages from a dead relative because an archive automation has not stopped.
+
+**Emotion**
+
+Grief made briefly ordinary, then newly unbearable.
+
+**Character**
+
+Open.
+
+**Question or tension**
+
+Who notices first, and does anyone have the right to end the messages?
+
+**No required ending**
+
+---
+
 ## The girl next door
 
 **Situation**

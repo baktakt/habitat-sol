@@ -78,6 +78,28 @@ Some people born on Mars may find Earth oceans disturbing rather than beautiful.
 - how common this response is;
 - which stories, if any, make it specific to a character.
 
+## Decision: Heritage-tourist nickname
+
+**Status:** provisional
+
+**Why it matters**
+
+Heritage tourism can make Sol's history feel commodified to the people who live inside it.
+
+**Chosen direction**
+
+Sol teenagers use a mildly insulting nickname for heritage tourists.
+
+**Consequences**
+
+- the nickname can signal local impatience with visitors who treat the town as an exhibit;
+- its exact wording should emerge only when a story needs it.
+
+**Still open**
+
+- the nickname itself;
+- how widely it is used outside teenagers' speech.
+
 ## Priority world systems
 
 Only define these when a story needs them:
