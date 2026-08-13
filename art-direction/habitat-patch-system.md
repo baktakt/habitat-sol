@@ -45,6 +45,8 @@ Use **one shared negative prompt for every patch**, then append the short habita
 
 ### 1. Habitat Sol
 
+![Habitat Sol patch reference](images/patches/patch-habitat-sol.png)
+
 **Feeling:** first civilian town; intimate, historic, maintained through care; civic memory under constraint.
 
 **Positive prompt**
