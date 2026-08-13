@@ -17,9 +17,9 @@ collectible: true
 
 # Where the Patch Was
 
-Lina worked her thumbnail beneath the last green thread while the departure board refreshed beyond the kitchen door.
+Lina worked her thumbnail along the last green thread while the list of departures for Meridian refreshed on her device.
 
-The Sol patch came away crooked, leaving a clean oval on her jacket. Around it, the fabric had faded from years of wash cycles and greenhouse air. She rubbed the brighter shape with her thumb, but it only made the absence clearer.
+The Sol patch came off, leaving a clean oval on her jacket. Around it, the fabric had faded from years of wash cycles and greenhouse air. She rubbed the brighter shape with her thumb, but it only made the absence clearer.
 
 Kenji looked up from an opened rover relay on the table.
 
@@ -41,7 +41,7 @@ Instead, Kenji turned the patch over once and placed it beside the relay’s tin
 
 “When nobody knows where you’re from.”
 
-The board chimed. A Meridian departure moved from delayed to boarding, though Lina had nowhere to go and no ticket to miss. She pulled on the jacket. The pale oval sat over her heart like a mark left by something heavy.
+The device vibrated. A Meridian departure moved from delayed to boarding, though Lina had nowhere to go and no ticket to miss. She pulled on the jacket. The pale oval sat over her heart like a mark left by something heavy.
 
 Kenji slid the patch into his tool drawer after she had gone.
 
