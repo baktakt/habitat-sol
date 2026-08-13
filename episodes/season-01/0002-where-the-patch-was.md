@@ -90,7 +90,7 @@ Inside the Varga-Sato kitchen-workshop, Lina Sato-Varga stands in the left foreg
 - Workflow: ACE-Step 1.5 text2music
 - Model/checkpoint: TBD
 - Caption suggestion: |
-    cinematic sci-fi ambient, intimate and quietly restless, restrained pulsing synths, warm evolving strings, sparse felt piano, subtle mechanical and fabric-like organic textures, spacious but close, adolescent longing beneath domestic warmth, melancholic without tragedy, tender unresolved tension, slow emotional build that never becomes heroic, instrumental, no vocals
+    cinematic sci-fi ambient, intimate and gently hopeful, restrained pulsing synths, warm evolving strings, sparse felt piano, subtle mechanical and fabric-like organic textures, spacious but close, adolescent longing held inside domestic warmth, reflective without sadness, tender forward motion, a gradual lift into quiet possibility, instrumental, no vocals
 - Lyrics / structure suggestion: |
     [Intro - Sparse, intimate]
 
@@ -98,9 +98,9 @@ Inside the Varga-Sato kitchen-workshop, Lina Sato-Varga stands in the left foreg
 
     [Development - Warm strings enter beneath subtle mechanical textures]
 
-    [Emotional turn - Harmony opens briefly with a sense of distance and possibility]
+    [Emotional turn - Harmony opens into a warm major-key lift and a sense of possibility]
 
-    [Outro - Strip back to piano, low synth pulse, and one unresolved sustained tone]
+    [Outro - Strip back to piano and low synth pulse, ending on a soft resolved chord]
 - Duration: TBD
 - BPM / key / time signature: TBD
 - Seed: TBD
