@@ -2,68 +2,128 @@
 
 ## Purpose
 
-Generate **text-free fabric patch reference images** for clothing, bags, maintenance gear, civic uniforms, and props across the Martian settlement network. Habitat Sol uses a round civic badge; the othe...[truncated]
+Generate a coherent set of **text-free civic fabric patch reference images** for clothing, bags, maintenance gear, civic uniforms, and props across the Martian settlement network. Habitat Sol uses a round badge; the other habitats use softly rounded square badges.
 
-## Shared Martian red thread
+These prompts are written as complete, ready-to-paste Qwen Image prompts. Do not concatenate prompt fragments at run time.
 
-Every habitat patch follows one family grammar:
+## Shared design grammar
 
-- a tactile embroidered/chenille or woven-fabric badge, square format with softly rounded corners;
-- **the fixed, non-negotiable frame palette on every patch:** outer border in oxidized Mars red `#9A3E2F`; inner containment ring in basalt navy `#162B3A`; stitch/edge marks in dust cream `#D6C6A6`; do not substitute a habitat-local colour in any of these three frame elements;
-- one central environmental/civic motif, one orbit/route/seal geometry, and limited local palette;
-- visible thread, slightly uneven stitching, practical field-issued construction, quiet use marks;
-- **no typography, letters, numbers, words, logos, watermarks, flags, or pseudo-writing**;
-- photographed/documented front-on on neutral worn canvas, not modelled on clothing, not a glossy product advert.
+Every habitat patch belongs to one visual family:
 
-The red thread communicates a shared Martian ecosystem without making the habitats interchangeable: each patch balances the common border and ring with a distinct local material, colour accent, and motif.
+- tactile embroidered thread and woven cloth, made for repeated civilian use rather than ceremony;
+- a fixed outer frame palette: oxidized Mars red (`#9A3E2F`), basalt navy (`#162B3A`), and dust cream (`#D6C6A6`);
+- one bold civic or environmental motif with a limited habitat-specific accent palette;
+- simple geometry that remains legible when the patch is small on clothing;
+- visible thread, slightly uneven stitching, softened edges, and restrained use marks;
+- no typography, letters, numbers, words, flags, commercial branding, or pseudo-writing;
+- front-on documentation on neutral woven canvas, not attached to clothing and not presented as glossy merchandise.
 
-## Prompt baseline
+The frame colours provide the shared Martian identity. Habitat-specific colours belong inside the central motif and must not replace the oxidized-red outer border, basalt-navy containment field, or dust-cream stitch details.
 
-Append this to each habitat-specific prompt:
+## Qwen prompt format
 
-> square textile mission patch reference, front-on orthographic product-documentary view on worn neutral canvas; tactile embroidered thread and woven cloth, softly rounded corners; **identical standard frame across the entire Martian habitat series: outer border exactly oxidized Mars red #9A3E2F, inner containment ring exactly basalt navy #162B3A, stitch and edge marks exactly dust cream #D6C6A6; these frame colours never change and are not habitat palette accents**; practical field-issued construction, subtle wear, no readable text, no letters, no numbers, no words, no logo, no watermark, no pseudo-writing, no flags; physically plausible fabric and thread, no human, no clothing, no mockup, no glossy commercial product photography.
+Each positive prompt follows the same order:
 
-Use this negative prompt in the workflow:
+1. image type and exact patch shape;
+2. fixed family frame;
+3. central motif and local palette;
+4. material, condition, and construction;
+5. background, lighting, and composition;
+6. explicit absence of recognizable text.
 
-> readable text, letters, typography, numbers, words, logo, watermark, signature, pseudo-writing, flag, QR code, person, face, hands, clothing mockup, mannequin, glossy product advertisement, plastic texture, chrome, generic spaceship, military insignia, anime, cartoon, low quality, blurry, distorted geometry.
+Use natural continuous prose and concrete visible relationships. Keep one main motif, state exact counts where they matter, and avoid abstract lore that cannot be rendered. Colour names carry the visual instruction; hex values are production references and may not be reproduced exactly by the model.
 
-## Habitat prompts
+## Negative-prompt strategy
 
-### 1. Habitat Sol — current render
+Use **one shared negative prompt for every patch**, then append the short habitat-specific suffix listed below. This avoids six drifting copies of the same baseline while still blocking each motif's likely failure modes. Critical requirements also remain in the positive prompts because negative conditioning alone is not reliable enough to define identity.
+
+### Shared negative prompt
+
+> readable text, letters, typography, numbers, words, pseudo-writing, signature, QR code, flag, commercial brand logo, watermark, military heraldry, rank chevrons, weapon motif, person, face, body, hands, clothing, jacket, bag, mannequin, clothing mockup, multiple patches, duplicate patch, cropped patch, tilted product view, extreme perspective, folded patch, glossy merchandise advertisement, retail packaging, presentation box, plastic badge, metal badge, enamel pin, sticker, rubber patch, chrome, reflective foil, photoreal scene inside the emblem, generic spaceship, astronaut, heavy grime, heavy rust, burned fabric, torn motif, loose detached pieces, neon glow, hologram, anime, cartoon, distorted geometry, asymmetrical frame, unreadable motif, low resolution, low quality, blurry
+
+## Ready-to-use habitat prompts
+
+### 1. Habitat Sol
 
 **Feeling:** first civilian town; intimate, historic, maintained through care; civic memory under constraint.
 
-> Habitat Sol patch: a **perfectly round** civic fabric badge with a continuous circular oxidized-red outer border, circular basalt-navy containment field, and circular dust-cream stitch ring; centered simplified flat greenhouse arch built from bold moss-green and muted-ochre stitched bands, sheltering one small stylized three-leaf sprout beneath a warm amber sun-disc; calm practical civic warmth, first civilian town, old Mars, collective care; clean intact patch field with **no repair seam, no cross-shaped patch, no lower-right-corner applique, and no extra geometric mark**; no square or rectangular patch geometry; **[append text/no-text constraints and fixed palette; do not append the square-format clause]**
+**Positive prompt**
 
-### 2. Habitat Meridian — next render
+> A single perfectly round Habitat Sol civic fabric badge, centered and fully visible in a square 1:1 reference image. Its fixed family frame has one continuous oxidized Mars-red outer border, a circular basalt-navy containment field, and one dust-cream stitch ring. At the center, a simplified greenhouse arch made from bold moss-green and muted-ochre embroidered bands shelters exactly one small three-leaf sprout beneath one warm amber sun-disc. The motif is flat, balanced, and readable at badge size, expressing civilian shelter, cultivation, and collective care without military symbolism. The badge is tactile woven cloth with dense embroidery, slightly uneven practical stitching, softly worn thread, and an intact field; there is no repair seam, added applique, cross-shaped insert, or extra geometric mark. It lies flat and front-on on neutral warm-grey woven canvas under soft even documentary light with a restrained contact shadow. No clothing, hands, packaging, or recognizable text appears.
+
+**Append to shared negative prompt**
+
+> square patch, rectangular patch, shield shape, repair seam, cross-shaped insert, lower-right applique, extra symbol, multiple sprouts, multiple suns, missing greenhouse arch, dead plant, ruined greenhouse
+
+### 2. Habitat Meridian
 
 **Feeling:** administrative and transport capital; efficient, cosmopolitan, controlled.
 
-> Habitat Meridian patch: an abstract central transit interchange, three clean radial route lines joining a balanced meridian circle beneath a small rust-red horizon; slate blue, graphite, cool silver-grey, restrained teal and oxidized red; disciplined geometry, precise spacing, quiet institutional authority, transit and governance rather than military power; **[append Prompt baseline]**
+**Positive prompt**
+
+> A single softly rounded square Habitat Meridian civic fabric badge, centered and fully visible in a square 1:1 reference image. Its fixed family frame uses an oxidized Mars-red outer border, a basalt-navy inner containment ring, and dust-cream stitch and edge details. The center contains one precise abstract transit interchange: exactly three clean radial route lines meet one balanced meridian circle beneath one short rust-red horizon bar. Slate blue, graphite, cool silver-grey, and restrained teal appear only inside the central motif. The geometry is disciplined, evenly spaced, and legible at badge size, conveying civic transport and administration rather than military command. The badge is woven cloth with fine practical embroidery, firm reinforced edges, subtle thread texture, and restrained use marks. It lies flat and front-on on neutral warm-grey woven canvas under soft even documentary light with a restrained contact shadow. No map labels, arrows, vehicles, clothing, hands, packaging, or recognizable text appears.
+
+**Append to shared negative prompt**
+
+> subway map, road map, map labels, arrows, compass rose, target reticle, radar screen, corporate transit logo, more than three route lines, extra circles, chaotic routes
 
 ### 3. Habitat Elysium
 
-**Feeling:** largest, wealthiest city; health, beauty, biotech, media, status.
+**Feeling:** largest and wealthiest city; health, beauty, biotech, media, and status.
 
-> Habitat Elysium patch: a stylized white greenhouse petal or medical bioform enclosing a polished water droplet, surrounded by a delicate orbital halo; bone white, pale aqua, soft lilac, pearl grey and a small oxidized-red edge; refined but not luxurious, medically advanced civic optimism, materially plausible embroidery; **[append Prompt baseline]**
+**Positive prompt**
+
+> A single softly rounded square Habitat Elysium civic fabric badge, centered and fully visible in a square 1:1 reference image. Its fixed family frame uses an oxidized Mars-red outer border, a basalt-navy inner containment ring, and dust-cream stitch and edge details. The center holds one stylized bone-white greenhouse petal shaped like a calm medical bioform, enclosing exactly one pale-aqua embroidered water droplet and surrounded by one thin soft-lilac orbital arc. Pearl grey and a restrained pale-aqua accent remain inside the motif. The design is refined, clean, and medically advanced but still civilian, tactile, and materially modest; it must read as stitched cloth rather than jewelry or luxury branding. Fine embroidery, woven backing, softened thread, and very light use marks keep it physically plausible. It lies flat and front-on on neutral warm-grey woven canvas under soft even documentary light with a restrained contact shadow. No cross symbol, medical text, clothing, hands, packaging, or recognizable text appears.
+
+**Append to shared negative prompt**
+
+> red medical cross, hospital logo, caduceus, DNA helix, syringe, glossy liquid, glass jewel, pearl jewelry, cosmetics logo, luxury fashion badge, flower bouquet, multiple droplets, multiple orbital arcs
 
 ### 4. Habitat Ferrum
 
-**Feeling:** industrial powerhouse; labor, durability, unionized solidarity.
+**Feeling:** industrial powerhouse; labour, durability, fabrication, and union solidarity.
 
-> Habitat Ferrum patch: a heavy forged hexagonal bolt framing a simple furnace glow and two interlocking structural beams; iron grey, burnt orange, charcoal, muted copper and oxidized red; thick thread, reinforced edges, useful and durable rather than aggressive; **[append Prompt baseline]**
+**Positive prompt**
+
+> A single softly rounded square Habitat Ferrum civic fabric badge, centered and fully visible in a square 1:1 reference image. Its fixed family frame uses an oxidized Mars-red outer border, a basalt-navy inner containment ring, and dust-cream stitch and edge details. The center contains one heavy iron-grey hexagonal bolt outline framing exactly two interlocking structural beams above one compact burnt-orange furnace glow. Charcoal, iron grey, muted copper, and burnt orange remain inside the central motif. The geometry is bold, stable, and readable at badge size, conveying skilled civilian fabrication and collective labour rather than combat, extraction, or corporate power. Thick embroidery, reinforced woven edges, sturdy thread, and restrained use marks make the badge practical and durable without grime or damage. It lies flat and front-on on neutral warm-grey woven canvas under soft even documentary light with a restrained contact shadow. No tools, weapons, flames outside the furnace shape, clothing, hands, packaging, or recognizable text appears.
+
+**Append to shared negative prompt**
+
+> skull, weapon, crossed hammers, crossed tools, raised fist, gear logo, mining-company logo, hazard symbol, aggressive flames, explosion, molten metal spill, heavy soot, broken bolt, more than two beams
 
 ### 5. Habitat Astra
 
-**Feeling:** university and research city; youthful argument, knowledge, discovery.
+**Feeling:** university and research city; youthful argument, knowledge, and discovery.
 
-> Habitat Astra patch: a compact observatory aperture with an abstract star field and a single measured trajectory line, nested in an open book-like geometric frame; midnight blue, chalk white, violet, cool cyan and oxidized red; curious, rigorous, lightly youthful, scholarly rather than mystical; **[append Prompt baseline]**
+**Positive prompt**
+
+> A single softly rounded square Habitat Astra civic fabric badge, centered and fully visible in a square 1:1 reference image. Its fixed family frame uses an oxidized Mars-red outer border, a basalt-navy inner containment ring, and dust-cream stitch and edge details. The center contains one compact midnight-blue observatory aperture nested inside one simple open-book geometry, with exactly three small chalk-white embroidered star points and one measured cool-cyan trajectory arc. A restrained violet accent remains inside the central motif. The composition is curious, rigorous, and youthful but not mystical, and its few bold elements remain legible at badge size. Fine practical embroidery, woven backing, slightly uneven stitches, and restrained use marks keep it civic and field-issued rather than ceremonial. It lies flat and front-on on neutral warm-grey woven canvas under soft even documentary light with a restrained contact shadow. No constellations, equations, lettering, clothing, hands, packaging, or recognizable text appears.
+
+**Append to shared negative prompt**
+
+> astrology, zodiac, horoscope, magic symbol, constellation lines, dense star field, galaxy photograph, rocket, spaceship, telescope silhouette, equations, academic seal, laurel wreath, more than three stars, multiple trajectory arcs
 
 ### 6. Habitat Arcadia
 
-**Feeling:** agriculture, water, ice, ecology, self-sufficiency.
+**Feeling:** agriculture, water, ice, ecology, and self-sufficiency.
 
-> Habitat Arcadia patch: a water droplet becoming an ice crystal and a green leaf within a terraced basin shape; deep algae green, ice blue, clear teal, clay brown and oxidized red; practical ecological stewardship, experimental but grounded; **[append Prompt baseline]**
+**Positive prompt**
 
+> A single softly rounded square Habitat Arcadia civic fabric badge, centered and fully visible in a square 1:1 reference image. Its fixed family frame uses an oxidized Mars-red outer border, a basalt-navy inner containment ring, and dust-cream stitch and edge details. The center contains one clear teal water droplet whose upper edge transitions into one pale ice-blue six-point crystal while its lower edge shelters exactly one deep algae-green leaf above one simple clay-brown terraced basin. The transition is graphic and stitched, not photoreal. The balanced motif is experimental, ecological, and legible at badge size, conveying practical stewardship of water, ice, and food systems. Tactile embroidery, woven cloth, slightly uneven stitching, softened edges, and restrained use marks make it useful rather than decorative. It lies flat and front-on on neutral warm-grey woven canvas under soft even documentary light with a restrained contact shadow. No landscape scene, produce basket, clothing, hands, packaging, or recognizable text appears.
 
-Reject a candidate if it contains accidental writing, a logo-like mark, legible numerals, militaristic heraldry, a glossy merch aesthetic, or loses the common red/basalt/cream grammar. Select only an image that reads clearly at both badge size and full resolution.
+**Append to shared negative prompt**
+
+> recycling logo, environmental NGO logo, planet Earth, globe, forest landscape, farm landscape, mountain scene, snowflake pattern covering badge, multiple leaves, multiple droplets, fruit, vegetables, wheat sheaf, photoreal water, glossy droplet
+
+## Review and selection
+
+Reject a candidate if it:
+
+- contains accidental writing, numerals, commercial branding, flags, or militaristic heraldry;
+- changes the fixed oxidized-red, basalt-navy, and dust-cream family frame;
+- adds motifs or decorative geometry not requested by the habitat prompt;
+- looks like plastic, metal, a sticker, luxury merchandise, or a clothing mockup;
+- uses heavy grime or damage instead of restrained evidence of ordinary use;
+- becomes illegible when reduced to the size of a badge on a jacket.
+
+Select only a patch that has the correct silhouette, exact motif count, coherent family frame, plausible textile construction, and clear identity at both badge size and full resolution. Preserve the selected prompt, negative prompt, seed, model, resolution, and output path with the approved reference image.
