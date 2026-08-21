@@ -4,6 +4,8 @@
 
 The daily life of two families in Habitat Sol, the first settlement on Mars. It's set in the year 2187, or in Mars year count, SY (Settlement Year) 93.  
 
+The archive alternates intimate fiction with concise, image-led world notes. The world notes give readers usable bearings on the cities, institutions, materials, customs, and constraints surrounding the families; they should make later character stories feel deeper, not replace them.
+
 ## The central tension
 
 Humanity succeeded in settling Mars, but success did not remove loneliness, inequality, nostalgia, bureaucracy, ambition, grief, or the desire to leave home.
@@ -32,6 +34,7 @@ Readers should feel:
 - dystopian misery
 - shiny utopian futurism
 - technology exposition disguised as fiction
+- a textbook, travel brochure, corporate promotion, or lore dump; factual posts must stay specific, visual, and human in their implications
 
 ## Recurring questions
 

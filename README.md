@@ -18,21 +18,23 @@ Sol is intimate, mature, civic-minded, proud, and increasingly unsure of its pla
 
 ## Project format
 
-The public work is intended as a weekly gallery/fiction/music rhythm:
+The public work is intended as a weekly gallery, fiction, world-note, and music rhythm. Entries deliberately alternate between:
 
 - one image,
-- one short story,
+- either a short story glimpse or a concise factual world note,
 - one original music cue,
 - one sol,
 - recurring characters,
 - evolving canon.
+
+World notes make the wider Martian civilization legible through specific subjects—such as habitat patches, cities, everyday systems, objects, or customs—so the families' choices land in a world readers understand.
 
 ## Repository map
 
 ```text
 canon/          Core worldbuilding facts: history, settlements, society, technology.
 characters/         Character sheets and family structures.
-episodes/           Weekly episode drafts.
+episodes/           Weekly fiction glimpses and factual world-note drafts.
 art-direction/      Visual language, references, and style rules.
 music/              Episode-music direction, prompts, and provenance.
 research/           Science-backed Mars, space exploration, and habitat-living knowledge base.
