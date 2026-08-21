@@ -8,7 +8,11 @@ Reference material for moving people, cargo, information, and risk: EVA, vehicle
 - What turns a delayed shipment into a crisis?
 - What does communication delay change in governance, intimacy, news, and emergencies?
 
-## Recommended note names
+## Current notes
+
+- [Mars EVA Life-Support Design Gaps](mars-eva-life-support-design-gaps-2026.md)
+
+## Suggested future note names
 
 - `eva-time-limits-and-suit-operations.md`
 - `rovers-range-rescue-and-route-planning.md`
