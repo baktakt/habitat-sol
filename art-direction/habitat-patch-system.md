@@ -101,6 +101,8 @@ Use **one shared negative prompt for every patch**, then append the short habita
 
 ### 5. Habitat Astra
 
+![Habitat Astra patch reference](images/patches/patch-habitat-astra.png)
+
 **Feeling:** university and research city; youthful argument, knowledge, and discovery.
 
 **Positive prompt**
