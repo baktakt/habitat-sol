@@ -87,6 +87,8 @@ Use **one shared negative prompt for every patch**, then append the short habita
 
 ### 4. Habitat Ferrum
 
+![Habitat Ferrum patch reference](images/patches/patch-habitat-ferrum.png)
+
 **Feeling:** industrial powerhouse; labour, durability, fabrication, and union solidarity.
 
 **Positive prompt**
