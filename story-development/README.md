@@ -93,20 +93,32 @@ Fragments are welcome. Polished writing is not required.
 
 The AI is responsible for organizing useful fragments, proposing consequences, identifying contradictions, and turning selected material into stories.
 
-## AI writing rule
+## Public-entry format
 
-## Episode scale: glimpses, not full short stories
+Habitat Sol uses two complementary Instagram-scale entry types. Alternate them deliberately so readers learn the world the families inhabit without turning the fiction into exposition.
 
-Habitat Sol entries are written for an Instagram post. They should feel like a **glimpse**: one charged moment, one small exchange, one image that lingers, and some room for the reader to infer the larger life around it.
+### Fiction glimpse
+
+A **fiction glimpse** is one charged moment, small exchange, or image that lingers, with room for the reader to infer the larger life around it.
 
 - Aim for **120–220 words of story prose**; go beyond that only when the creator explicitly asks for a longer piece.
 - Center one immediate action, observation, or turn. Do not try to establish every character, the town's entire pressure, or a complete plot in one entry.
 - Keep dialogue when it reveals a relationship, but use only the lines the moment needs.
 - Let an object, gesture, interruption, or withheld response imply the wider story instead of explaining it.
 - End on an image, a changed look, or an unanswered feeling—not a summary, moral, or explanatory paragraph.
-- The image brief and production record are not part of the public story-word target.
 
-Across multiple entries, small glimpses should accumulate into a larger life.
+### World note
+
+A **world note** is a concise, image-led factual post about an established part of Mars: a settlement, patch, public system, object, custom, or practical constraint. It should provide context a reader can carry into later fiction.
+
+- Lead with one clear subject and imageable claim, rather than an encyclopedia overview.
+- Aim for **70–160 words** of public copy, using plain language and concrete examples.
+- State only locked or established facts as facts. If a consequential detail is still open, omit it or explicitly present it as a provisional creative proposal before publication.
+- Explain why the subject matters to ordinary residents or to the two families; avoid sterile statistics and marketing language.
+- For a multi-image carousel, give each slide one distinct idea and end with a small connective line back to Sol or a character pressure.
+- Do not invent a fictional scene merely to make a world note feel dramatic. The image, object, place, or civic implication should carry the post.
+
+Across both kinds of entry, fiction and world knowledge should accumulate into a larger life.
 
 The AI should not ask the creator to define every missing detail.
 

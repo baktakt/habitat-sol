@@ -1,10 +1,15 @@
 # Episodes
 
-Episodes are weekly art-fiction-and-music entries.
+Episodes are weekly art, fiction/world-note, and music entries.
 
-## Public-story length
+## Public copy and entry types
 
-The public story is an Instagram-scale glimpse, normally **120–220 words**. Capture one scene, sensory detail, or small exchange; preserve conversation where it earns its place, but let implication do more work than explanation. Image briefs and production notes do not count toward this target. See [`music/README.md`](../music/README.md) for the episode-music workflow and provenance requirements.
+Choose one of two formats:
+
+- **Fiction glimpse:** normally **120–220 words**. Capture one scene, sensory detail, or small exchange; preserve conversation where it earns its place, but let implication do more work than explanation.
+- **World note:** normally **70–160 words**. Explain one established world subject in plain, concrete language and connect it to ordinary life in Sol. A patch, city, transport practice, civic object, or recurring constraint can anchor the image. Do not state open or provisional worldbuilding as settled fact.
+
+Image briefs and production notes do not count toward the public-copy target. See [`music/README.md`](../music/README.md) for the episode-music workflow and provenance requirements.
 
 ## Episode file template
 
@@ -12,6 +17,7 @@ The public story is an Instagram-scale glimpse, normally **120–220 words**. Ca
 ---
 episode: 0001
 title: The Tomatoes Failed During Breakfast
+entry_type: fiction_glimpse
 sol: 7284
 earth_year: 2187
 location: Greenhouse Ring B
@@ -31,6 +37,8 @@ collectible: true
 # The Tomatoes Failed During Breakfast
 
 [Short story text]
+
+For a factual entry, set `entry_type: world_note` and replace the story with concise public copy grounded in established canon.
 
 ## Image brief
 

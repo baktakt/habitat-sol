@@ -59,6 +59,8 @@ Use **one shared negative prompt for every patch**, then append the short habita
 
 ### 2. Habitat Meridian
 
+![Habitat Meridian patch reference](images/patches/patch-habitat-meridian.png)
+
 **Feeling:** administrative and transport capital; efficient, cosmopolitan, controlled.
 
 **Positive prompt**
