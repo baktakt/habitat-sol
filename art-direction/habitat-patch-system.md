@@ -37,6 +37,8 @@ Use this negative prompt in the workflow:
 
 ### 2. Habitat Meridian — next render
 
+![Habitat Meridian patch reference](images/patches/patch-habitat-meridian.png)
+
 **Feeling:** administrative and transport capital; efficient, cosmopolitan, controlled.
 
 > Habitat Meridian patch: an abstract central transit interchange, three clean radial route lines joining a balanced meridian circle beneath a small rust-red horizon; slate blue, graphite, cool silver-grey, restrained teal and oxidized red; disciplined geometry, precise spacing, quiet institutional authority, transit and governance rather than military power; **[append Prompt baseline]**
