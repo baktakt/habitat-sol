@@ -1,0 +1,167 @@
+{
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "ACE-Step 1.5 XL SFT"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15.safetensors",
+      "clip_name2": "qwen_1.7b_ace15.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "ACE 0.6B embedding + 1.7B planner"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "ACE-Step 1.5 VAE"
+    }
+  },
+  "94": {
+    "inputs": {
+      "clip": [
+        "105",
+        0
+      ],
+      "tags": "Intimate cinematic ambient chamber-electronic instrumental cue for a human-scale Mars settlement drama, felt piano, warm analog synthesizer pads, restrained low strings and cello harmonics, subtle processed habitat ventilation texture used musically, soft sub-bass pulse, minimal brushed percussion entering late, 72 BPM, 4/4, D minor with a cautious lift toward F major, close and spacious production, natural dynamics, quiet tension turning to fragile warmth, mature and understated, no vocals, no choir, no spoken word, no trailer percussion, no bombast, no heroic space opera",
+      "lyrics": "[Intro - Felt piano alone, wide pauses, faint warm air-system texture]\n\n[Theme - A small descending piano motif, intimate and unresolved]\n\n[Development - Low strings and soft analog pads enter gradually, sub-bass pulse remains restrained]\n\n[Interlude - Percussion drops out, cello harmonics and room tone leave a sense of distance]\n\n[Build - Minimal brushed pulse enters, harmony opens carefully without becoming triumphant]\n\n[Climax - Piano, low strings and warm pads briefly align in a human-scale emotional swell]\n\n[Outro - Return to felt piano and air-system texture, final chord gently open but calm]",
+      "seed": 27182818,
+      "bpm": 72,
+      "duration": 105.0,
+      "timesignature": "4",
+      "language": "en",
+      "keyscale": "D minor",
+      "generate_audio_codes": true,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "Habitat Sol music direction"
+    }
+  },
+  "78": {
+    "inputs": {
+      "model": [
+        "104",
+        0
+      ],
+      "shift": 3.0
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "Sampling shift 3"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 105.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "105-second latent"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Zero negative conditioning"
+    }
+  },
+  "3": {
+    "inputs": {
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ],
+      "seed": 27182818,
+      "steps": 50,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "XL SFT quality sampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "Decode audio"
+    }
+  },
+  "107": {
+    "inputs": {
+      "audio": [
+        "18",
+        0
+      ],
+      "filename_prefix": "audio/habitat-sol/HabitatSol_XL_SFT",
+      "quality": "V0"
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Delivery MP3"
+    }
+  },
+  "111": {
+    "inputs": {
+      "audio": [
+        "18",
+        0
+      ],
+      "filename_prefix": "audio/habitat-sol/HabitatSol_XL_SFT_master"
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Lossless FLAC master"
+    }
+  }
+}

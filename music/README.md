@@ -4,6 +4,19 @@ Each Habitat Sol episode may include an original instrumental cue generated loca
 
 Use the upstream [ACE-Step 1.5 tutorial](https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md) for installation, model selection, interface details, and current parameter guidance. This document defines the Habitat Sol creative and archival workflow.
 
+## Recommended local model
+
+For the project's RTX 3090 (24 GB), use **ACE-Step 1.5 XL SFT** with the official ComfyUI split files and the 1.7B planner:
+
+- `diffusion_models/acestep_v1.5_xl_sft_bf16.safetensors`
+- `text_encoders/qwen_0.6b_ace15.safetensors`
+- `text_encoders/qwen_1.7b_ace15.safetensors`
+- `vae/ace_1.5_vae.safetensors`
+
+XL SFT is the quality-first choice for finished episode cues: 50-step inference, tunable CFG, stronger detail and prompt adherence. The 1.7B planner is the upstream recommendation for 20–24 GB cards and leaves safer headroom than the 4B planner on this RTX 3090/16 GB host. Use the existing `ace_step_1.5_turbo_aio.safetensors` only for faster drafts. The installed editor workflow is `habitat-sol/music/01_habitat_sol_ace_step_1_5_xl_sft_quality.json`; the version-controlled UI and API graphs are under `music/workflows/`.
+
+Start with batch size 1, 90–120 seconds, Euler/simple, 50 steps, CFG 7, and sampling shift 3. Generate several seeds rather than increasing batch size on a nearly full 24 GB card.
+
 ## Creative direction
 
 Write the cue from the finished episode, not from a generic series prompt.
