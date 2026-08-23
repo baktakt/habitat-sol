@@ -73,6 +73,8 @@ Use **one shared negative prompt for every patch**, then append the short habita
 
 ### 3. Habitat Elysium
 
+![Habitat Elysium patch reference](images/patches/patch-habitat-elysium.png)
+
 **Feeling:** largest and wealthiest city; health, beauty, biotech, media, and status.
 
 **Positive prompt**
