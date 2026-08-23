@@ -115,6 +115,8 @@ Use **one shared negative prompt for every patch**, then append the short habita
 
 ### 6. Habitat Arcadia
 
+![Habitat Arcadia patch reference](images/patches/patch-habitat-arcadia.png)
+
 **Feeling:** agriculture, water, ice, ecology, and self-sufficiency.
 
 **Positive prompt**
