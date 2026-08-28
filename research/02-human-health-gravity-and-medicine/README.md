@@ -9,9 +9,12 @@ Reference material for long-duration health in a 0.38 g environment: musculoskel
 - What injuries or illnesses become emergencies because evacuation is impossible?
 - Which health issues remain uncertain enough for cautious, explicit fiction?
 
-## Recommended note names
+## Current notes
 
-- `partial-gravity-human-health-evidence.md`
+- [Partial Gravity and Long-Duration Human Health](partial-gravity-human-health-evidence.md)
+
+## Suggested future note names
+
 - `radiation-health-risk-and-countermeasures.md`
 - `medical-care-and-evacuation-limits.md`
 - `sleep-mental-health-and-isolation.md`
