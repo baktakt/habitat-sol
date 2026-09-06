@@ -10,7 +10,7 @@ themes:
   - belonging
   - civic identity
   - settlement history
-status: draft
+status: published
 collectible: true
 ---
 
@@ -84,6 +84,8 @@ A seven-slide square carousel built from the six approved civic patch references
 
 ## Production notes
 
+Historical briefs and prompt suggestions below are retained for reference; they are not a verified record of the published assets. Publication is confirmed by the creator; exact publication dates and final media links have not been recorded.
+
 ### Image
 
 - Image workflow: Seven-slide graphic carousel using approved patch assets
@@ -102,7 +104,6 @@ A seven-slide square carousel built from the six approved civic patch references
 ### Music
 
 - Workflow: ACE-Step 1.5 text2music
-- Model/checkpoint: TBD
 - Caption: |
     restrained civic science-fiction ambient, warm woven textures, quiet forward pulse, six subtly shifting instrumental colors held inside one coherent theme, reflective and expansive without grandeur, documentary worldbuilding tone, instrumental, no vocals
 - Lyrics / structure: |
@@ -111,11 +112,3 @@ A seven-slide square carousel built from the six approved civic patch references
     [Development — Six restrained variations pass through different instrumental colors]
 
     [Resolution — The variations return to the shared opening motif]
-- Duration: TBD
-- BPM / key / time signature: TBD
-- Seed: TBD
-- Inference settings: TBD
-- Source output: TBD
-- Final master: TBD
-- Delivery file: TBD
-- Selection/mastering notes: TBD

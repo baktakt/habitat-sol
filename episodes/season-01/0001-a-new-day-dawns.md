@@ -14,7 +14,7 @@ themes:
   - work
   - hope
   - uncertainty
-status: draft
+status: published
 collectible: true
 ---
 
@@ -41,19 +41,11 @@ Mira Varga, a 42-year-old agronomist with dark curly hair tied back and a patche
 
 ## Production notes
 
-### Image
-
-- Workflow: TBD
-- Model: TBD
-- Seed: TBD
-- Prompt: TBD
-- Negative prompt: TBD
-- Final image: TBD
+Historical briefs and prompt suggestions below are retained for reference; they are not a verified record of the published assets. Publication is confirmed by the creator; exact publication dates and final media links have not been recorded.
 
 ### Music
 
 - Workflow: ACE-Step 1.5 text2music
-- Model/checkpoint: ACE-Step 1.5 (exact checkpoint TBD)
 - Caption: |
     cinematic sci-fi ambient, deep pulsing synths, warm evolving strings, sparse piano, organ-like textures, intimate, atmospheric, melancholic, hopeful, spacious, restrained, futuristic
 - Lyrics / structure: |
@@ -70,11 +62,3 @@ Mira Varga, a 42-year-old agronomist with dark curly hair tied back and a patche
     [Climax - Full, emotional, expansive]
 
     [Outro - Fading, spacious, unresolved]
-- Duration: TBD
-- BPM / key / time signature: TBD
-- Seed: TBD
-- Inference settings: TBD
-- Source output: TBD
-- Final master: TBD
-- Delivery file: TBD
-- Selection/mastering notes: TBD

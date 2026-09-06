@@ -1,6 +1,6 @@
 # Inbox
 
-Put quick thoughts here during the daily ten-minute session.
+Put quick thoughts here whenever they occur. There is no daily quota; labels are optional. Preserve the creator’s original wording when transferring ideas from conversation.
 
 Do not organize them. Do not finish them. An AI process can sort useful fragments later.
 

@@ -4,8 +4,7 @@ Canon questions to resolve later.
 
 ## World timeline
 
-- **Main story year: 2187 CE.** See [Timeline](timeline.md).
-- What is Habitat Sol's exact founding year and age at story opening?
+- **Settled:** Sol was founded in 2094 CE; the story opens in 2187 CE / SY 93. See [Timeline](timeline.md).
 - Was Sol founded by a coalition, corporation, state program, or settlement compact?
 - How independent is Mars politically from Earth?
 
@@ -15,6 +14,14 @@ Canon questions to resolve later.
 - Does it have a dome, multiple pressure modules, buried rings, or a hybrid structure?
 - How do people travel between Sol and larger cities?
 - How expensive or routine is inter-settlement travel?
+
+## Earth and migration
+
+The broad condition of Earth is established in [Earth](earth.md). Still open:
+
+- Which regions remain habitable, and how are displacement and land access governed?
+- Who can afford or qualify for Earth–Mars travel?
+- Why did particular families or their ancestors move to Mars?
 
 ## Society
 

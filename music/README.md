@@ -71,32 +71,15 @@ The section names are guides, not a mandatory form. Shorter episodes may only ne
 5. Listen against the episode rather than judging the cue in isolation. Reject results that overwhelm the scene, introduce accidental vocals, or resolve an intentionally unresolved ending.
 6. When tuning one parameter, hold the seed fixed so the comparison is meaningful. When exploring compositions, vary the seed.
 7. Select a final candidate, export a lossless master and the delivery format needed by the publishing platform, then normalize/master conservatively without crushing the cue's dynamics.
-8. Record enough information in the episode file to reproduce or audit the result.
+8. Let production tooling retain useful technical details externally; link the selected asset from the episode when available.
 
-## Episode production record
+## Lightweight music record
 
-Under `## Production notes`, keep image and music records separate. Record:
+The episode file only needs a short musical direction and, when available, a link to the selected cue or Reel. Technical provenance belongs in the external production bundle and should be captured by automation, not filled in by the author. Do not add empty fields or require retrospective reconstruction of published episodes.
 
-```markdown
-### Music
+For new production, preserve the chosen audio, exact prompt, seed, model/workflow, and relevant rights information alongside the render when available. Useful historical prompts may remain in the repository. A brief or suggested prompt is not proof of which audio was published.
 
-- Workflow: ACE-Step 1.5 text2music
-- Model/checkpoint:
-- Caption: |
-    [exact caption]
-- Lyrics / structure: |
-    [exact structure prompt]
-- Duration:
-- BPM / key / time signature:
-- Seed:
-- Inference settings:
-- Source output:
-- Final master:
-- Delivery file:
-- Selection/mastering notes:
-```
-
-Do not replace exact prompts with summaries. Record the seed, checkpoint, duration, and non-default settings once a cue is selected. Generated audio files may be stored outside Git when they are too large; use stable paths or release/asset links rather than committing temporary renders.
+The current format trial combines still images and original music in a Reel. Match cue duration to the edit rather than forcing every scene into a fixed length. Human listening and creator approval remain necessary before publication.
 
 ## Episode 0001 prompt example
 

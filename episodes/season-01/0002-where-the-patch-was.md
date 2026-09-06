@@ -11,7 +11,7 @@ themes:
   - ambition
   - belonging
   - family
-status: draft
+status: published
 collectible: true
 ---
 
@@ -55,11 +55,10 @@ Inside the Varga-Sato kitchen-workshop, Lina Sato-Varga stands in the left foreg
 
 ## Production notes
 
+Historical briefs and prompt suggestions below are retained for reference; they are not a verified record of the published assets. Publication is confirmed by the creator; exact publication dates and final media links have not been recorded.
+
 ### Image
 
-- Image workflow: TBD
-- Model: TBD
-- Seed: TBD
 - Environment plate prompt suggestion: |
     ARCHITECTURAL LOCATION PLATE. A realistic vertical 4:5 municipal-documentary image of the empty Varga-Sato kitchen-workshop inside a sealed Habitat Sol pressure module. The viewpoint is at normal adult eye level with a medium-wide field of view, looking across a low family worktable toward a pressure-rated doorway. This describes only the viewpoint; no recording equipment is visible. Matte olive-grey and warm mineral-beige pressure panels form rounded structural corners around flush storage latches, integrated ventilation and water-recovery fittings, utility rails, tether points, intact seals, and maintained components from different installation periods. A deeply recessed pressure window shows connected habitat modules, rust-red terrain, and a muted dusty Martian sky. Keep the left foreground as a broad uninterrupted area of clear floor against a plain wall panel. Keep the right middle ground open around one built-in seat against a plain utility panel, with a wide clear gap between the two open areas. Architectural edges remain at their outer boundaries. The table stays low and narrow; its left half is empty, while the far-right end holds one opened rover relay, a neat cluster of screws, a hand cutter, and two precision tools. Warm practical interior light mixes with cool Martian daylight. The room feels domestic, compact, safe, mature, and cared for, with realistic materials, restrained color, clear spatial depth, no people, and no recognizable text.
 - Negative prompt suggestion: |
@@ -81,14 +80,10 @@ Inside the Varga-Sato kitchen-workshop, Lina Sato-Varga stands in the left foreg
 - Patch close-up inpaint prompt suggestion: |
     Put the patch from image 2 onto the table in image 1, replacing the empty patch that is there now. Change nothing else.
 - Patch close-up inpaint negative prompt suggestion: leave empty
-- Final prompt: TBD
-- Final negative prompt: TBD
-- Final image: TBD
 
 ### Music
 
 - Workflow: ACE-Step 1.5 text2music
-- Model/checkpoint: TBD
 - Caption suggestion: |
     cinematic sci-fi ambient, intimate and gently hopeful, restrained pulsing synths, warm evolving strings, sparse felt piano, subtle mechanical and fabric-like organic textures, spacious but close, adolescent longing held inside domestic warmth, reflective without sadness, tender forward motion, a gradual lift into quiet possibility, instrumental, no vocals
 - Lyrics / structure suggestion: |
@@ -101,11 +96,3 @@ Inside the Varga-Sato kitchen-workshop, Lina Sato-Varga stands in the left foreg
     [Emotional turn - Harmony opens into a warm major-key lift and a sense of possibility]
 
     [Outro - Strip back to piano and low synth pulse, ending on a soft resolved chord]
-- Duration: TBD
-- BPM / key / time signature: TBD
-- Seed: TBD
-- Inference settings: TBD
-- Source output: TBD
-- Final master: TBD
-- Delivery file: TBD
-- Selection/mastering notes: TBD

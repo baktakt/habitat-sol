@@ -4,9 +4,9 @@
 
 Habitat Sol is a weekly visual fiction and music archive set in the first permanent civilian settlement on Mars.
 
-Each entry pairs a generated image and an original music cue with a short story: a glimpse into ordinary life inside an extraordinary place. The project follows two neighboring families as they work, love, grieve, argue, raise children, grow food, repair machines, and try to remain human in a world that was never built for them.
+Each entry pairs imagery and an original music cue with a short story or world note: a glimpse into ordinary life inside an extraordinary place. The project follows two neighboring families as they work, love, grieve, argue, raise children, grow food, repair machines, and try to remain human in a world that was never built for them.
 
-This repository is the open world bible for the Habitat Sol universe. Canon, characters, settlements, visual direction, music direction, episode drafts, research, and story-development notes evolve here.
+This repository is the open world bible for the Habitat Sol universe. Canon, characters, settlements, visual direction, music direction, published episodes and drafts, research, and story-development notes evolve here.
 
 Follow the weekly archive on [Instagram](https://www.instagram.com/habitat_sol?igsh=MWNvejFtMmtyYWM1Yw%3D%3D&utm_source=qr).
 
@@ -16,11 +16,13 @@ The story begins in **Habitat Sol**, the oldest Martian settlement: population r
 
 Sol is intimate, mature, civic-minded, proud, and increasingly unsure of its place in the future. Its age appears through design history and continuity of use, not through neglect or collapse.
 
+Earth remains inhabited but deeply unequal after climate-driven displacement; see [Earth in 2187](canon/earth.md).
+
 ## Project format
 
-The public work is intended as a weekly gallery, fiction, world-note, and music rhythm. Entries deliberately alternate between:
+The public work follows a weekly fiction, world-note, and music rhythm. The next trial is still-image Reels with original music, reviewed by the creator before publication. Entries combine:
 
-- one image,
+- one or more images,
 - either a short story glimpse or a concise factual world note,
 - one original music cue,
 - one sol,
@@ -32,11 +34,11 @@ World notes make the wider Martian civilization legible through specific subject
 ## Repository map
 
 ```text
-canon/          Core worldbuilding facts: history, settlements, society, technology.
+canon/              Core worldbuilding facts: history, settlements, society, technology.
 characters/         Character sheets and family structures.
-episodes/           Weekly fiction glimpses and factual world-note drafts.
+episodes/           Published fiction/world notes and new drafts.
 art-direction/      Visual language, references, and style rules.
-music/              Episode-music direction, prompts, and provenance.
+music/              Music direction and retained workflow references.
 research/           Science-backed Mars, space exploration, and habitat-living knowledge base.
 story-development/  Story seeds, observations, character pressure, and creator notes.
 ```

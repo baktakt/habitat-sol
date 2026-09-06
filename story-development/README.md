@@ -1,4 +1,4 @@
-# Writers’ Input
+# Story Development
 
 This directory contains the human creative direction for Habitat Sol.
 
@@ -74,9 +74,19 @@ Develop a subject when:
 
 Otherwise, leave it open.
 
-## Daily workflow
+## Author-led weekly rhythm
 
-The creator should spend approximately ten minutes per day adding one small piece of input.
+The agreed editorial target is a complete review draft every Friday, not automatic publication. This describes the intended workflow; it does not mean production or scheduling has been implemented.
+
+- **Any time:** Johan can drop a text fragment, voice note, image, or link into the conversation. No daily quota or required labels. Preserve original wording alongside any AI summary when transferring an idea to the inbox.
+- **Monday:** offer two concise story directions and recommend one; Johan chooses or redirects.
+- **Tuesday:** draft the selected scene and ask only consequential questions about character, meaning, or canon.
+- **Wednesday–Thursday:** prepare image, music, and layout candidates within the chosen direction.
+- **Friday:** deliver one recommended review package, with a few clear outstanding decisions. Johan can edit at any point and makes the final publication decision.
+
+If Johan does not reply, work may continue as an explicitly unapproved draft within established boundaries. Silence never approves new canon or publication.
+
+## Easy input
 
 Possible contributions include:
 
@@ -89,13 +99,13 @@ Possible contributions include:
 - one reaction to generated material;
 - one thing that feels wrong for Habitat Sol.
 
-Fragments are welcome. Polished writing is not required.
+Fragments are welcome. Polished writing is not required. Personal observations and contemporary events may seed stories, but verified present-day facts, fictional extrapolation, and character opinion must remain distinct. Do not turn an observation into a lecture or invent a first-hand experience for a character.
 
 The AI is responsible for organizing useful fragments, proposing consequences, identifying contradictions, and turning selected material into stories.
 
 ## Public-entry format
 
-Habitat Sol uses two complementary Instagram-scale entry types. Alternate them deliberately so readers learn the world the families inhabit without turning the fiction into exposition.
+The next format trial is still-image Reels with original music. Fiction glimpses and world notes remain the two complementary Instagram-scale entry types. Alternate them deliberately so readers learn the world the families inhabit without turning the fiction into exposition.
 
 ### Fiction glimpse
 
