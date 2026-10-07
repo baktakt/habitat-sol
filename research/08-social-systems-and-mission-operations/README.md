@@ -10,6 +10,10 @@ This folder should use scientific and historical evidence carefully. It supports
 - What routines and rituals grow from maintenance, danger, confinement, and long communication delays?
 - How do scarce resources create care, hierarchy, black markets, trust, or conflict?
 
+## Current notes
+
+- [Sleep Disruption in a Four-Month Space Analogue](sleep-disruption-in-four-month-isolation-analogue-2026.md)
+
 ## Recommended note names
 
 - `mission-operations-and-work-rhythms.md`

@@ -12,6 +12,7 @@ Reference material for closed or partially closed habitat systems: atmosphere ma
 ## Current notes
 
 - [ISS ECLSS Evidence and Mars Limits](iss-eclss-evidence-and-mars-limits.md)
+- [Integrated Suit–Habitat CO₂ and Water Recovery Concept](integrated-suit-habitat-co2-water-recovery-2026.md)
 
 ## Suggested future note names
 
